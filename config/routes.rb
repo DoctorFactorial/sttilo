@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get 'blog' => 'pages#blog'
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
-  get 'albumn' => 'pages#albumn'
+  get 'album' => 'pages#album'
+  get 'weddings' => 'pages#weddings'
+  get 'travel' => 'pages#travel'
+  get 'communion' => 'pages#communion'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

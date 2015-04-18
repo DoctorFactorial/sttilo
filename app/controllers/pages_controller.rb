@@ -11,6 +11,15 @@ class PagesController < ApplicationController
   def contact
   end
 
-  def albumn
+  def album
+  end
+
+  def weddings
+  end
+
+  def travel
+  end
+
+  def communion
   end
 end
