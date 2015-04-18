@@ -1,5 +1,6 @@
-<%= link_to image_tag('logo_placeholder.png', alt: 'root'), root_path %>
-
+<div class="logo">
+	<%= link_to image_tag('logo_placeholder.png', alt: 'root'), root_path %>
+</div>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -9,6 +10,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
 
       <ul class="nav navbar-nav">
+      	
       	<li><%= link_to 'Weddings'.upcase, weddings_path %></li>
 
         <li class="dropdown">
@@ -29,6 +31,7 @@
       	<li><%= link_to 'Blog'.upcase, blog_path %></li>
       	
       	<li><%= link_to 'Contact'.upcase, contact_path %></li>
+
       </ul>
       
       
