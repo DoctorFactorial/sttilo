@@ -52,3 +52,6 @@ gem 'simple_form'
 #Add devise
 gem 'devise'
 
+#Add paperclip
+gem 'paperclip'
+
