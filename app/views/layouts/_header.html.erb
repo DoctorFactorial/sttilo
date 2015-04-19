@@ -1,13 +1,10 @@
-<div class="logo">
-	<%= link_to image_tag('logo_placeholder.png', alt: 'root'), root_path %>
-</div>
+<div class="logo"><%= link_to image_tag('logo_placeholder.png', alt: 'root'), root_path %></div>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav">
       	
@@ -32,9 +29,20 @@
       	
       	<li><%= link_to 'Contact'.upcase, contact_path %></li>
 
+        <% if current_user %>
+
+          <li><%= link_to 'Logout'.upcase, destroy_user_session_path, method: :delete %></li>
+
+        <% else %>
+
+          <li><%= link_to 'Login'.upcase, new_user_session_path %></li>
+
+        <% end %>
+
       </ul>
       
-      
-    </div><!-- /.navbar-collapse -->
+    </div>
+
+  </div><!-- /.navbar-collapse -->
 
 </nav>
