@@ -55,3 +55,7 @@ gem 'devise'
 #Add paperclip
 gem 'paperclip'
 
+#Load environment variables
+gem 'dotenv-rails', groups: [:development]
+
+
