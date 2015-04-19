@@ -6,20 +6,22 @@
 			<thead>
 				<tr>
 					<th>Id</th>
-					
 					<th>Name</th>
+					<th>Thumbnail</th>
 					<th>Category</th>
 					<th>Visible</th>
 				</tr>
 			</thead>	
 			<tbody>
 				<% @photos.each do |photo| %>
-					<td><%= photo.id %></td>
-
-					<td><%= link_to photo.name, photo_path(photo) %></td>
-					<td><%= photo.category %></td>
-					<td><%= photo.visible %></td>
-					<td><%= link_to "Edit", edit_photo_path(photo) %></td>
+					<tr>
+						<td><%= photo.id %></td>
+						<td><%= link_to photo.name, photo_path(photo) %></td>
+						<td><%= image_tag photo.image.url(:original), class: 'thumbnail' %></td>
+						<td><%= photo.category %></td>
+						<td><%= photo.visible %></td>
+						<td><%= link_to "Edit", edit_photo_path(photo) %></td>
+					</tr>
 				<% end %>
 			</tbody>
 		</table>
