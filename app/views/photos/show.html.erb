@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <strong>Image:</strong>
+  <%= image_tag @photo.image.url(:original), class: 'img-responsive' %>
+</p>
+
+<p>
   <strong>Visible:</strong>
   <%= @photo.visible %>
 </p>

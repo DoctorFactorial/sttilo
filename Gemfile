@@ -58,4 +58,7 @@ gem 'paperclip'
 #Load environment variables
 gem 'dotenv-rails', groups: [:development]
 
+# Add comms with amazon
+gem 'aws-sdk', '< 2.0'
+
 
