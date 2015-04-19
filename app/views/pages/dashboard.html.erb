@@ -1,0 +1,27 @@
+<div class='row'>
+	<h1 class='text-center'>Dashboard</h1>
+	<div class='col-md-12'>
+		<h3 class='text-center'><%= link_to 'Add Photo', new_photo_path, class: 'btn btn-primary btn-sm' %></h3>
+		<table class='table'>
+			<thead>
+				<tr>
+					<th>Id</th>
+					
+					<th>Name</th>
+					<th>Category</th>
+					<th>Visible</th>
+				</tr>
+			</thead>	
+			<tbody>
+				<% @photos.each do |photo| %>
+					<td><%= photo.id %></td>
+
+					<td><%= link_to photo.name, photo_path(photo) %></td>
+					<td><%= photo.category %></td>
+					<td><%= photo.visible %></td>
+					<td><%= link_to "Edit", edit_photo_path(photo) %></td>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -41,6 +41,8 @@
 
         <% if current_user %>
 
+          <li><%= link_to "Dashboard", dashboard_path %></li>
+
           <li><%= link_to 'Logout'.upcase, destroy_user_session_path, method: :delete %></li>
 
         <% else %>

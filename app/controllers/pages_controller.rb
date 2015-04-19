@@ -1,8 +1,13 @@
 class PagesController < ApplicationController
+
   def home
     if current_user
       redirect_to album_path
     end
+  end
+
+  def dashboard
+    @photos = Photo.all
   end
 
   def blog

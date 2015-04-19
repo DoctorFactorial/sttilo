@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'weddings' => 'pages#weddings'
   get 'travel' => 'pages#travel'
   get 'communion' => 'pages#communion'
+  get 'dashboard' => 'pages#dashboard'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
