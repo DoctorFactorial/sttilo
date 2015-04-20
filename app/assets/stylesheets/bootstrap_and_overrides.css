@@ -39,13 +39,30 @@
     border-color: white;
 }
 
-
-
-
-.logo {
-     margin: 50px 0px 50px 0px;
-     text-align: center
+div.logo {
+     margin-top:0px;
+     margin-bottom:30px;
+     text-align: center;
 }
+
+.container-fluid{
+    margin-bottom:40px;
+}
+
+a:link { 
+  color: #000;
+}
+a:visited { 
+  color: #000;
+}
+a:hover { 
+  color: #555;
+}
+a:active { 
+  color: #000;
+}
+
+
 
 .thumb{
   width: 50px;
@@ -70,3 +87,7 @@
     .row-fluid .thumbnails .span6{       
         list-style-type: none;
     }
+}
+
+
+
