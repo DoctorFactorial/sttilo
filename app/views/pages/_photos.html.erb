@@ -1,24 +1,12 @@
-<% @photos.each_with_index do |photo, index| %>
+<div class="row-fluid">
 
-  <% if index % 2 == 0 %>
-  
-    <div class="col-md-6">
-      <div class="thumbnail">
-      <%= image_tag photo.image.url(:original), class: "img-responsive" %>
-    </div>
-    </div>
+<center>
 
-  <% elsif index % 2 == 1 %>
+<%= render_gallery_for @photos, list_tag: :ul, item_tag: :li, list_class: 'thumbnails', item_class: 'span6'  %>
 
-    <div class="col-md-6">
-      <div class="thumbnail">
-      <%= image_tag photo.image.url(:original), class: "img-responsive" %>
-    </div>
-    </div>
+</center>
 
-  <% end %>
-
-<% end %>
+</div>
 
 
 

@@ -61,4 +61,7 @@ gem 'dotenv-rails', groups: [:development]
 # Add comms with amazon
 gem 'aws-sdk', '< 2.0'
 
+# Add hermitage front end gallery
+gem 'hermitage'
+
 
