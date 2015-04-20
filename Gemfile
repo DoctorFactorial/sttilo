@@ -64,4 +64,5 @@ gem 'aws-sdk', '< 2.0'
 # Add hermitage front end gallery
 gem 'hermitage'
 
-
+# Get font awesome icons
+gem 'font-awesome-sass'
