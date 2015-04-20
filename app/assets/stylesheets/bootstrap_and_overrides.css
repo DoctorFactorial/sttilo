@@ -28,4 +28,17 @@
  .nav.navbar-nav li {
     text-align: left
  }
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
 }
+
+.navbar-default {
+    background-color: white;
+    border-color: white;
+}
+}
+
+
+

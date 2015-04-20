@@ -17,7 +17,7 @@
 					<tr>
 						<td><%= photo.id %></td>
 						<td><%= link_to photo.name, photo_path(photo) %></td>
-						<td><%= image_tag photo.image.url(:original), class: 'thumbnail' %></td>
+						<td><%= image_tag photo.image.url(:original), class: 'thumb' %></td>
 						<td><%= photo.category %></td>
 						<td><%= photo.visible %></td>
 						<td><%= link_to "Edit", edit_photo_path(photo) %></td>

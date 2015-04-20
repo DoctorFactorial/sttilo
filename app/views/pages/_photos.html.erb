@@ -1,0 +1,25 @@
+<% @photos.each_with_index do |photo, index| %>
+
+  <% if index % 2 == 0 %>
+  
+    <div class="col-md-6">
+      <div class="thumbnail">
+      <%= image_tag photo.image.url(:original), class: "img-responsive" %>
+    </div>
+    </div>
+
+  <% elsif index % 2 == 1 %>
+
+    <div class="col-md-6">
+      <div class="thumbnail">
+      <%= image_tag photo.image.url(:original), class: "img-responsive" %>
+    </div>
+    </div>
+
+  <% end %>
+
+<% end %>
+
+
+
+
