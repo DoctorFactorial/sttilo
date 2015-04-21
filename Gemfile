@@ -70,3 +70,6 @@ gem 'font-awesome-sass'
 # Add CanCan Authorisation
 gem 'cancan'
 
+# Add Masonry layout for blog
+gem 'masonry-rails', '~> 0.2.4'
+
