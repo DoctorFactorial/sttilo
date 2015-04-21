@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    authorize! :manage, @photo
     @photos = Photo.all
   end
 
