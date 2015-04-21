@@ -1,26 +1,31 @@
 <div class='row'>
-	<h1 class='text-center'>Dashboard</h1>
-	<div class='col-md-12'>
+	<div class='col-md-10 col-md-offset-1'>
 		<h3 class='text-center'><%= link_to 'Add Photo', new_photo_path, class: 'btn btn-primary btn-sm' %></h3>
 		<table class='table'>
 			<thead>
 				<tr>
-					<th>Id</th>
-					<th>Name</th>
-					<th>Thumbnail</th>
-					<th>Category</th>
-					<th>Visible</th>
+					<th>ID</th>
+					<th>NAME</th>
+					<th>PHOTO</th>
+					<th>CATEGORY</th>
+					<th>SHOW</th>
+					<th>EDIT</th>
+					<th>DELETE</th>
+
 				</tr>
 			</thead>	
 			<tbody>
 				<% @photos.each do |photo| %>
 					<tr>
 						<td><%= photo.id %></td>
-						<td><%= link_to photo.name, photo_path(photo) %></td>
-						<td><%= image_tag photo.image.url(:original), class: 'thumb' %></td>
+						<td><%= photo.name %></td>
+						<td><%= link_to photo_path(photo) do %>
+							<%= image_tag photo.image.url(:original), class: 'thumb' %>
+						<% end %></td>
 						<td><%= photo.category %></td>
-						<td><%= photo.visible %></td>
-						<td><%= link_to "Edit", edit_photo_path(photo) %></td>
+						<td><%= button_to 'Show', photo_path(photo), method: :get, class: 'btn btn-small' %></td>
+        				<td><%= button_to 'Edit', edit_photo_path(photo), method: :get, class: 'btn btn-small' %></td>
+        				<td><%= button_to 'Delete', photo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-small' %></td>
 					</tr>
 				<% end %>
 			</tbody>

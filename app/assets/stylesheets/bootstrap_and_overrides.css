@@ -6,6 +6,61 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+
+
+/* btn */
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #3D6652;
+    color: #ffffff !important;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #779486;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+.btn-small {
+    padding: 7px 12px;
+    border: 0 none;
+    font-weight: 250;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.btn-small:focus, .btn-small:active:focus, .btn-small.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-small {
+    background: #3D6652;
+    color: #ffffff !important;
+}
+ 
+.btn-small:hover, .btn-small:focus, .btn-small:active, .btn-small.active, .open > .dropdown-toggle.btn-primary {
+    background: #779486;
+}
+ 
+.btn-small:active, .btn-small.active {
+    background: #007299;
+    box-shadow: none;
+}
+
 /* footer */
 /* make responsive */
 @media (min-width: 768px) {
@@ -85,7 +140,7 @@ div.logo {
 a:link { 
   color: #000;
 }
-:visited { 
+a:visited { 
   color: #000;
 }
 a:hover { 
