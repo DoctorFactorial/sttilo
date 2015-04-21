@@ -1,10 +1,12 @@
 class PhotosController < ApplicationController
-  before_action :authenticate_user!, :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
+  before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
   # GET /photos
   # GET /photos.json
   def index
     @photos = Photo.all
+    respond_with(@photos)
   end
 
   # GET /photos/1
@@ -15,6 +17,7 @@ class PhotosController < ApplicationController
   # GET /photos/new
   def new
     @photo = Photo.new
+    respond_with(@photo)
   end
 
   # GET /photos/1/edit
@@ -24,7 +27,7 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @photo = current_user.books.new(photo_params)
+    @photo = current_user.photos.new(photo_params)
     @photo.save
     respond_with(@photo)
 
