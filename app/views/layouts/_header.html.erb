@@ -1,7 +1,9 @@
 <!-- Social Media Icons -->
 
 <nav class="navbar navbar-default">
-  <div class="container-fluid", align="right", style="margin:10px 10px 0 0;">
+  <div class="container-fluid", style="margin:10px 10px 0 0;">
+    <span style='float: right'>
+      <ul>
     <%= link_to "<i class='fa fa-twitter'></i>".html_safe, 'https://twitter.com/sttilophoto' %>
     &nbsp;
     <%= link_to "<i class='fa fa-facebook'></i>".html_safe, 'https://www.facebook.com/sttiloweddingphotography' %>
@@ -9,7 +11,20 @@
     <%= link_to "<i class='fa fa-instagram'></i>".html_safe, 'http://www.enjoygram.com/sttiloweddingphotography' %>
     &nbsp;
     <%= link_to "<i class='fa fa-pinterest'></i>".html_safe, 'https://www.pinterest.com/sttilow/' %>
+  </ul>
+  </span>
+  <span style='float: left'>
+    <% if current_user %>
+      <%= link_to "Dashboard".upcase, dashboard_path, {:style => 'font-size:90%;'} %>
+      &nbsp;
+      <%= link_to 'Logout'.upcase, destroy_user_session_path, {:style => 'font-size:90%;', method: :delete} %>
+    </ul>
+    <% else %>
+      <%= link_to 'Client Login'.upcase, new_user_session_path, {:style => 'font-size:90%;'} %>
+    <% end %>
+  </span>
   </nav>
+    
 </div>
 
 <!-- Company Logo -->
@@ -45,12 +60,7 @@
       	<li class=<%= 'active' if current_page?(blog_path) %>><%= link_to 'Blog'.upcase, blog_path %></li>
       	<li class=<%= 'active' if current_page?(contact_path) %>><%= link_to 'Contact'.upcase, contact_path %></li>
 
-        <% if current_user %>
-          <li><%= link_to "Dashboard", dashboard_path %></li>
-          <li><%= link_to 'Logout'.upcase, destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to 'Login'.upcase, new_user_session_path %></li>
-        <% end %>
+
       </ul>
     </div>
   </div><!-- /.navbar-collapse -->
