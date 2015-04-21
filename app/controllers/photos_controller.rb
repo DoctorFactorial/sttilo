@@ -6,7 +6,6 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @photos = Photo.all
-    respond_with(@photos)
   end
 
   # GET /photos/1
@@ -16,17 +15,19 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
+    authorize! :manage, @photo
     @photo = Photo.new
-    respond_with(@photo)
   end
 
   # GET /photos/1/edit
   def edit
+    authorize! :manage, @photo
   end
 
   # POST /photos
   # POST /photos.json
   def create
+    authorize! :manage, @photo
     @photo = current_user.photos.new(photo_params)
     @photo.save
     respond_with(@photo)

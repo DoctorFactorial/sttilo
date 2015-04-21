@@ -66,3 +66,7 @@ gem 'hermitage'
 
 # Get font awesome icons
 gem 'font-awesome-sass'
+
+# Add CanCan Authorisation
+gem 'cancan'
+
