@@ -1,5 +1,6 @@
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-signin"}) do |f| %>
 
+
 <h2 class="text-center">Log in</h2>
 
     <%= f.input :email, label: false, placeholder: 'Email', required: false, autofocus: true %>
@@ -11,6 +12,5 @@
     <div class="text-left">
 	    <%= render "devise/shared/links" %>
 	</div>
+
 <% end %>
-
-

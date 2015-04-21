@@ -1,24 +1,15 @@
-<p id="notice"><%= notice %></p>
+<center>
+<h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @photo.name %>
-</p>
-
-<p>
-  <strong>Category:</strong>
+  	<%= @photo.name %>
+</h1>
+<h3 class="sub-header">
   <%= @photo.category %>
-</p>
+</h3>
 
-<p>
-  <strong>Image:</strong>
   <%= image_tag @photo.image.url(:original), class: 'img-responsive' %>
-</p>
 
-<p>
-  <strong>Visible:</strong>
-  <%= @photo.visible %>
-</p>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<%= link_to 'Back', dashboard_path %>
+</center>

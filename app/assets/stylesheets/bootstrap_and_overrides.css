@@ -61,11 +61,16 @@
     box-shadow: none;
 }
 
+/* simple-form */
+h3.sub-header{
+  color: grey;
+}
+
 /* footer */
 /* make responsive */
 @media (min-width: 768px) {
 footer {
-  margin-top: 45px;
+  margin-top: 30px;
   margin-bottom: 0;
   padding-top: 5px;
   color: #999;
@@ -73,8 +78,7 @@ footer {
     margin-right:auto;
     width: 60%;
       position: relative;
-  margin-top: -150px; /* negative value of footer height */
-  height: 150px;
+  margin-top: 0px; /* negative value of footer height */
   clear:both;
   padding-top:20px;
 }
