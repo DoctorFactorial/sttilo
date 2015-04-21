@@ -1,15 +1,12 @@
 <center>
-<h1>
-
-  	<%= @photo.name %>
-</h1>
-<h3 class="sub-header">
-  <%= @photo.category %>
-</h3>
+<h4 class="sub-header">
+<%= @photo.name %> | <%= @photo.category %>
+</h4>
 
   <%= image_tag @photo.image.url(:original), class: 'img-responsive' %>
 
-
+<h5 class="sub-header">
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', dashboard_path %>
+</h5>
 </center>

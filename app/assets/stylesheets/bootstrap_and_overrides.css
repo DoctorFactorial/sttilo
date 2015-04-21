@@ -56,13 +56,17 @@
 }
  
 .btn-small:active, .btn-small.active {
-    background: #007299;
+    background: #3D6652;
     box-shadow: none;
 }
 
 /* simple-form */
-h3.sub-header{
-  color: grey;
+h4.sub-header{
+  color: #3D6652;
+}
+
+h1.sub-header{
+  color: #3D6652;
 }
 
 /* footer */
