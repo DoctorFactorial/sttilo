@@ -6,7 +6,52 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
-  
+/* footer */
+/* make responsive */
+@media (min-width: 768px) {
+footer {
+  margin-top: 45px;
+  margin-bottom: 0;
+  padding-top: 5px;
+  color: #999;
+    margin-left:auto;
+    margin-right:auto;
+    width: 60%;
+      position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+}
+}
+
+@media (max-width: 767px) {
+footer {
+  margin-bottom: 30px;
+  padding-top: 5px;
+  color: #999;
+    margin-left:auto;
+    margin-right:auto;
+    width: 60%;
+    position: relative;
+  padding-top:20px;
+}
+}
+
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: none !important;
+  text-align: center;
+}
+
 
 /* centered navigation */
  .nav.navbar-nav {
@@ -29,30 +74,30 @@
     text-align: left
  }
 
+/* dashboard */
 .thumbnail {
     border: 0 none;
     box-shadow: none;
 }
 
-.navbar-default {
-    background-color: white;
-    border-color: white;
+/* photos */
+.thumb{
+    height:50px;
 }
 
+
+/* place main logo in header */
 div.logo {
      margin-top:0px;
      margin-bottom:30px;
      text-align: center;
 }
 
-.container-fluid{
-    margin-bottom:40px;
-}
-
+/* colour icons in header */
 a:link { 
   color: #000;
 }
-a:visited { 
+:visited { 
   color: #000;
 }
 a:hover { 
@@ -62,13 +107,67 @@ a:active {
   color: #000;
 }
 
-
-
-.thumb{
-  width: 50px;
-    height: 50px;
+/* override navbar defaults */
+.navbar-default {
+    background-color: white;
+    border-color: white;
 }
 
+.container-fluid{
+    margin-bottom:40px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #555;
+    text-decoration: underline;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #000;
+    background-color: #FFF;
+    text-decoration: underline;
+}
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #000;
+    background-color: #FFF;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+            background-image:none !important;
+        }
+        .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+            background-color:none;
+            text-decoration: underline;
+        }
+
+ul.nav a:active { 
+    color: #000 !important; 
+}
+
+ul.nav li.dropdown ul.dropdown-menu a:active{
+    color: #000 !important;    
+}
+
+/* make app pages responsive */
 @media (min-width: 768px) {
     .row-fluid .thumbnails .span6 {
         width:46%;
@@ -82,12 +181,8 @@ a:active {
     }
 }
 
-
 @media (max-width: 767px) {
     .row-fluid .thumbnails .span6{       
         list-style-type: none;
     }
 }
-
-
-
