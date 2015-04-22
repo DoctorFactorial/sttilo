@@ -30,7 +30,6 @@ class PhotosController < ApplicationController
     authorize! :manage, @photo
     @photo = current_user.photos.new(photo_params)
     @photo.save
-    respond_with(@photo)
 
     respond_to do |format|
       if @photo.save

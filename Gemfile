@@ -73,3 +73,7 @@ gem 'cancan'
 # Add Masonry layout for blog
 gem 'masonry-rails', '~> 0.2.4'
 
+# Create friendly urls
+gem 'friendly_id'
+
+
