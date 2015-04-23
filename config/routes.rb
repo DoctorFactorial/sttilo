@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :subpages
+  resources :subpages 
+
+  #get '/:id', :controller => 'subpages', :action => 'show'
+
+  Subpage.all.each do |sp|
+    category = if sp.category.nil? then '' else '/' + sp.category end
+    puts "Routing #{sp.name}"
+    get "#{category}/#{sp.name}", :to => "subpages#show", defaults: { id: sp.id }
+  end
 
   devise_for :admins
   resources :photos
