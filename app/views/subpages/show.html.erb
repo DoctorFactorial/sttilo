@@ -1,0 +1,12 @@
+<h3>
+  <%= @subpage.name %>
+</h3>
+
+<p>
+  <%= @subpage.content %>
+</p>
+
+<%= link_to 'Edit', edit_subpage_path(@subpage) %> |
+<%= link_to 'Delete', @subpage, :data => { :confirm => 'Are you sure?' }, :method => :delete %> |
+<%= link_to 'Back', subpages_path %>
+
