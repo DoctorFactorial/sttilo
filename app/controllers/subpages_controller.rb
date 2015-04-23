@@ -10,8 +10,7 @@ class SubpagesController < ApplicationController
   # GET /subpages/1
   # GET /subpages/1.json
   def show
-    @subpage = Subpage.find(params[:id])
-    raise ActiveRecord::RecordNotFound, "Page not found" if @subpage.nil?
+    @subpage = Subpage.friendly.find(params[:id])
   end
 
   # GET /subpages/new
@@ -66,7 +65,7 @@ class SubpagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_subpage
-      @subpage = Subpage.find(params[:id])
+      @subpage = Subpage.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

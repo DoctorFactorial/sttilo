@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150423150516) do
+ActiveRecord::Schema.define(version: 20150423155606) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -77,7 +77,10 @@ ActiveRecord::Schema.define(version: 20150423150516) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
   end
+
+  add_index "subpages", ["slug"], name: "index_subpages_on_slug", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
