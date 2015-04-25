@@ -20,7 +20,7 @@
       <%= link_to 'Logout'.upcase, destroy_user_session_path, {:style => 'font-size:90%;', method: :delete, :class => 'headers'} %>
     </ul>
     <% else %>
-      <%= link_to 'Client Login'.upcase, new_user_session_path, {:style => 'font-size:90%;', :class => 'headers'} %>
+      <%= link_to 'Login'.upcase, new_user_session_path, {:style => 'font-size:90%;color:white;', :class => 'headers'} %>
     <% end %>
   </span>
   </nav>

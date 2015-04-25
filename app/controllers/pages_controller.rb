@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
 
   def home
-    if current_user
-      redirect_to album_path
+    if current_user && current_user.admin?
+      redirect_to dashboard_path
     end
     @photos = Photo.where(category: 'Home Page')
   end
