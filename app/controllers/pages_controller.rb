@@ -4,39 +4,47 @@ class PagesController < ApplicationController
     if current_user && current_user.admin?
       redirect_to dashboard_path
     end
-    @photos = Photo.where(category: 'Home Page')
+    @subpages = Subpage.where(category: 'home page')
   end
 
   def dashboard
     authorize! :manage, @photo
     @photos = Photo.all
+    @subpages = Subpage.all
   end
 
   def blog
-    @photos = Photo.where(category: 'Blog')
+    # photo images to feed blog root 
+    @photos = Photo.where(category: 'blog')
   end
 
   def about
-    @photos = Photo.where(category: 'About')
+    # photos images to feed about root
+    @photos = Photo.where(category: 'about')
   end
 
   def contact
-    @photos = Photo.where(category: 'Contact')
+    # subpage nav images to feed contact page root
+    @photos = Subpage.where(category: 'contract')
   end
 
   def album
-    @photos = Photo.where(category: 'Album')
+    # subpage nav images to feed album page root
+    @subpages = Subpage.where(category: 'album')
   end
 
   def weddings
-    @photos = Photo.where(category: 'Weddings')
+    # subpage nav images to feed wedding page root
+    @subpages = Subpage.where(category: 'weddings')
   end
 
   def travel
-    @photos = Photo.where(category: 'Travel')
+    # subpage nav images to feed travel page root
+    @subpages = Subpage.where(category: 'travel')
   end
 
   def communion
-    @photos = Photo.where(category: 'Communion')
+    # subpage nav images to feed communion page root
+    @subpages = Subpage.where(category: 'communion')
   end
 end

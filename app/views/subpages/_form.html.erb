@@ -3,7 +3,7 @@
 
   <div class="form-inputs">
     <%= f.input :name, label: false, placeholder: 'Page name' %>
-    <%= f.input :category, label: false, collection: ['HOME', 'WEDDINGS', 'TRAVEL', 'COMMUNION', 'ALBUM'], prompt: "Select category" %>
+    <%= f.input :category, label: false, collection: ['home', 'weddings', 'travel', 'communion', 'album'].map(&:upcase), prompt: "Select category" %>
    <%= f.input :image, label: false %>
     <%= f.input :content, label: false, placeholder: 'Write any text here' %>
   </div>
