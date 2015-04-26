@@ -1,13 +1,14 @@
-<div class="row-fluid">
+<div class="row-fluid col-md-10 col-md-offset-1">
 
 <center>
 
-<%= render_gallery_for @photos, list_tag: :ul, item_tag: :li, list_class: 'thumbnails', item_class: 'span6'  %>
+<% if @photos %>
+	<%= render_gallery_for @photos, list_tag: :ul, item_tag: :li, list_class: 'thumbnails', item_class: 'span8'  %> 
+<% end %>
 
 </center>
 
 </div>
-
 
 
 

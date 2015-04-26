@@ -1,14 +1,1 @@
-<h3>
-  <%= @subpage.name %>
-</h3>
-
-<p>
-  <%= raw RedCloth.new(@subpage.content).to_html %>
-</p>
-
-<%= image_tag @subpage.image.url(:original), class: 'img-responsive' %>
-
-<%= link_to 'Edit', edit_subpage_path(@subpage) %> |
-<%= link_to 'Delete', @subpage, :data => { :confirm => 'Are you sure?' }, :method => :delete %> |
-<%= link_to 'Back', subpages_path %>
-
+<%= render 'pages/photos' %>
