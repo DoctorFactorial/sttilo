@@ -2,8 +2,8 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name, label: false, placeholder: 'Page name' %>
-    <%= f.input :category, label: false, collection: ['home', 'weddings', 'travel', 'communion', 'album'], prompt: "Select category" %>
+    <%= f.input :name, label: false, placeholder: 'Name' %>
+    <%= f.input :category, label: false, collection: ['home', 'weddings', 'travel', 'communion', 'album', 'blog'], prompt: "Select category" %>
    <%= f.input :image, label: false %>
     <%= f.input :content, label: false, placeholder: 'Write any text here' %>
   </div>

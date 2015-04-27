@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  DynamicRouter.load
   resources :subpages 
 
   #get '/:id', :controller => 'subpages', :action => 'show'
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   get 'travel' => 'pages#travel'
   get 'communion' => 'pages#communion'
   get 'dashboard' => 'pages#dashboard'
-  DynamicRouter.load
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

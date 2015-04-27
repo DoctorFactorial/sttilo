@@ -6,6 +6,18 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+/* blog */
+.blog_title{
+  margin-top: 10px;
+  text-align: left;
+  font-family: 'Merriweather', serif;
+}
+.blog_date{
+  color: #e55f7f;
+  text-align: left;
+  font-family: 'Merriweather', serif;
+}
+
 /* vertical space alignment */
 .logo img{
   width:40%;

@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 
   def blog
     # photo images to feed blog root 
-    @photos = Photo.where(category: 'blog')
+    @subpages = Subpage.where(category: 'blog')
   end
 
   def about
