@@ -18,6 +18,11 @@
   font-family: 'Merriweather', serif;
 }
 
+/* masonry boxes */
+#masonry-container img {
+  border-radius: 5px 5px 00px 00px; 
+}
+
 /* vertical space alignment */
 .logo img{
   width:40%;

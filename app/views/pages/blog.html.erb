@@ -1,6 +1,6 @@
-<div class="transitions-enabled" id="posts">
+<div class="transitions-enabled col1" id="posts">
   <% @subpages.each do |sp| %>
-    <div class="box panel panel-default">
+    <div class="box panel panel-default" id="masonry-container">
       <%= link_to (image_tag sp.image.url), send("#{sp.category}_#{sp.id}_path") %>
       <div class='container'>
       	<h3 class='blog_title'> <%= sp.name %> </h3>
