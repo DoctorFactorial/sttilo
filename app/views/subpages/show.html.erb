@@ -1,1 +1,13 @@
-<%= render 'pages/photos' %>
+<div class='row col-md-8 col-md-offset-2'>
+	<h2 class='blog_post_title'><%= @subpage.name %></h2>
+	<p class='blog_date'><%= @subpage.created_at.strftime("%A, %d %b %Y") %></p>
+	<div class='texts'><%= raw RedCloth.new(@subpage.content).to_html %></div>
+	<%= render 'pages/photos' %>
+</div>
+
+<div class='row col-md-8 col-md-offset-2'>
+	<div class="text-left texts">
+		<%= link_to 'Back', blog_path %>
+	</div>
+</div>
+

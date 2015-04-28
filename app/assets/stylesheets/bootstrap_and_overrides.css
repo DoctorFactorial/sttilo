@@ -10,14 +10,20 @@
 .blog_title{
   margin-top: 10px;
   text-align: left;
-  font-family: 'Merriweather', serif;
+  font-family: 'Raleway', sans-serif;
 }
 .blog_date{
   color: #e55f7f;
   text-align: left;
   font-family: 'Merriweather', serif;
 }
-
+.blog_post_title{
+  font-family: 'Raleway', sans-serif;
+}
+.blog_post_content{
+  font-family: 'Merriweather', serif;
+  color:red;
+}
 /* masonry boxes */
 #masonry-container img {
   border-radius: 5px 5px 00px 00px; 
