@@ -15,10 +15,15 @@
   </span>
   <span style='float: left'>
     <% if current_user %>
-      <%= link_to "Dashboard".upcase, dashboard_path, {:style => 'font-size:90%;', :class => 'headers'} %>
-      &nbsp;
       <%= link_to 'Logout'.upcase, destroy_user_session_path, {:style => 'font-size:90%;', method: :delete, :class => 'headers'} %>
-    </ul>
+      &nbsp; // &nbsp; 
+      <%= link_to "Pages".upcase, admin_pages_path, {:style => 'font-size:90%;', :class => 'headers', id:'photosButton'}  %>
+      &nbsp; // &nbsp; 
+      <%= link_to "Photos".upcase, admin_photos_path, {:style => 'font-size:90%;', :class => 'headers'} %>
+      &nbsp; // &nbsp; 
+      <%= link_to "Blog".upcase, admin_blog_path, {:style => 'font-size:90%;', :class => 'headers'} %>
+      &nbsp; // &nbsp; 
+      <%= link_to "Metrics".upcase, dashboard_path, {:style => 'font-size:90%;', :class => 'headers'} %>
     <% else %>
       <%= link_to 'Login'.upcase, new_user_session_path, {:style => 'font-size:90%;color:white;', :class => 'headers'} %>
     <% end %>
