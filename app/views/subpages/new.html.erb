@@ -1,9 +1,13 @@
-<h1 class='sub-header text-center'>Add Subpage</h1>
-
+<% if url_for(:back).split('admin/')[1] == 'blog' %>
+	<h1 class='sub-header text-center'>Add Blog Post</h1>
+<% elsif url_for(:back).split('admin/')[1] == 'pages' %>
+	<h1 class='sub-header text-center'>Add Subpage</h1>
+<% end %>
 <%= render 'form' %>
 
 <div class="text-center">
 	<h5 class="sub-header">
-<%= link_to 'Back', dashboard_path %>
+<%= link_to 'Back', url_for(:back) %>
 </h5>
 </div>
+

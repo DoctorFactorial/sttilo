@@ -19,12 +19,6 @@ class PagesController < ApplicationController
     @items = Subpage.where(category: 'blog')
   end
 
-  def dashboard
-    authorize! :manage, @photo
-    @photos = Photo.all
-    @subpages = Subpage.all
-  end
-
   def blog
     # photo images to feed blog root 
     @subpages = Subpage.where(category: 'blog')
