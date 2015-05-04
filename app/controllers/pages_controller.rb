@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-    if current_user && current_user.admin?
-      redirect_to dashboard_path
-    end
-    @subpages = Subpage.where(category: 'home page')
+    redirect_to weddings_path
   end
 
   def admin_photos
@@ -44,13 +41,9 @@ class PagesController < ApplicationController
     @subpages = Subpage.where(category: 'weddings')
   end
 
-  def travel
+  def lifestyle
     # subpage nav images to feed travel page root
-    @subpages = Subpage.where(category: 'travel')
+    @subpages = Subpage.where(category: 'lifestyle')
   end
 
-  def communion
-    # subpage nav images to feed communion page root
-    @subpages = Subpage.where(category: 'communion')
-  end
 end
