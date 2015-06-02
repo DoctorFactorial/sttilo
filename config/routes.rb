@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  DynamicBlogRouter.load
+  resources :blogs, :except => ['show', 'update', 'destroy']
+  get    'blogs/:id' => 'blogs#show', :as => 'show_blogs'
+  put    'blogs/:id' => 'blogss#update'
+  delete 'blogs/:id' => 'blogs#destroy'
+
   DynamicRouter.load
   resources :subpages 
 

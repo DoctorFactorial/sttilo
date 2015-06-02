@@ -1,0 +1,13 @@
+<div class="transitions-enabled col1" id="posts">
+  <% @blogs.each do |b| %>
+    <div class="box panel panel-default" id="masonry-container">
+      <%= link_to (image_tag b.image.url), send("#{b.category}_#{b.id}_path") %>
+      <div class='container'>
+      	<h3 class='blog_title'> <%= b.name %> </h3>
+	      <p class='blog_date'>
+	      <%= b.created_at.strftime("%A, %d %b %Y") %> 
+	      </p>
+	  </div>
+    </div>
+  <% end %>
+</div>

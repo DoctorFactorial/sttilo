@@ -1,0 +1,13 @@
+<div class='row col-md-8 col-md-offset-2'>
+	<h2 class='blog_post_title'><%= @blog.name %></h2>
+	<p class='blog_date'><%= @blog.created_at.strftime("%A, %d %b %Y") %></p>
+	<%= image_tag @blog.image.url(:display), :style => 'content' %>
+	<div class='texts'><%= raw RedCloth.new(@blog.content).to_html %></div>	
+</div>
+
+<div class='row col-md-8 col-md-offset-2'>
+	<div class="text-center links">
+		<%= link_to 'Edit', edit_blog_path(@blog) %> |
+		<%= link_to 'Back', url_for(:back) %>
+	</div>
+</div>

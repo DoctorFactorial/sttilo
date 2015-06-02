@@ -13,12 +13,11 @@ class PagesController < ApplicationController
   end
 
   def admin_blog
-    @items = Subpage.where(category: 'blog')
+    @items = Blog.all
   end
 
   def blog
-    # photo images to feed blog root 
-    @subpages = Subpage.where(category: 'blog')
+    @blogs = Blog.all
   end
 
   def about
@@ -28,7 +27,7 @@ class PagesController < ApplicationController
 
   def contact
     # subpage nav images to feed contact page root
-    @photos = Subpage.where(category: 'contract')
+    @photos = Photo.where(category: 'contract')
   end
 
   def album
