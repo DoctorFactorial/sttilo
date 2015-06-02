@@ -10,6 +10,7 @@ ready = ->
 	      itemSelector: '.box'
 	      isFitWidth: true
 
+
 $(document).ready(ready)
 $(document).on('page:load', ready)
 
