@@ -15,6 +15,22 @@
 			</thead>	
 			<tbody>
 				<% @items.each do |item| %>
+					<!-- Set show + edit paths --> 
+					<% case request.original_url.split('admin/')[1] %>
+					<% when 'pages' %>
+						<% show_path = subpage_path(item) %>
+						<% edit_path = edit_subpage_path(item) %>
+					<% when 'photos' %>
+						<% show_path = photo_path(item) %>
+						<% edit_path = edit_photo_path(item) %>
+					<% when 'blog' %>
+						<% show_path = photo_path(item) %>
+						<% edit_path = edit_photo_path(item) %>
+					<% else %>
+						<% show_path = root_path %>
+						<% edit_path = root_path %>
+					<% end %>
+
 					<tr>
 						<td><%= item.id %></td>
 						<td><%= item.name %></td>
@@ -22,9 +38,9 @@
 							<%= image_tag item.image.url(:thumb), class: 'thumb' %>
 						<% end %></td>
 						<td><%= item.category %></td>
-						<td><%= button_to 'Show', photo_path(item), method: :get, class: 'btn btn-small' %></td>
-        				<td><%= button_to 'Edit', edit_photo_path(item), method: :get, class: 'btn btn-small' %></td>
-        				<td><%= button_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-small' %></td>
+							<td><%= button_to 'Show', show_path, method: :get, class: 'btn btn-small' %></td>
+        			<td><%= button_to 'Edit', edit_path, method: :get, class: 'btn btn-small' %></td>
+        			<td><%= button_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-small' %></td>
 					</tr>
 				<% end %>
 			</tbody>

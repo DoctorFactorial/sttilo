@@ -83,7 +83,7 @@ group :development, :test do
   gem 'spring'
 end
 
-group :production, do
+group :production do
   # rack middleware that enables compressing of assets and application responses on Heroku
   gem 'heroku-deflater'
 end
