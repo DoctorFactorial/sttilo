@@ -3,7 +3,7 @@
 <%= @photo.name %> | <%= @photo.category %>
 </h4>
 
-  <%= image_tag @photo.image.url(:original), class: 'img-responsive' %>
+  <%= image_tag @photo.image.url(:content), class: 'img-responsive' %>
 
 <h5 class="sub-header">
 <%= link_to 'Edit', edit_photo_path(@photo) %> |

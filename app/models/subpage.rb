@@ -1,5 +1,9 @@
 class Subpage < ActiveRecord::Base
-	has_attached_file :image
+	has_attached_file :image,
+		:styles => {
+			:thumb => "100x100#",
+			:display => "348x232>"
+		}
 
 	validates_attachment_content_type :image,
 	content_type: /^image\/(png|gif|jpeg)/,

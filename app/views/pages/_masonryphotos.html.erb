@@ -1,7 +1,7 @@
 <div class="transitions-enabled gallery-up" id="posts">
   <% @subpages.each do |p| %>
     <div class="box panel panel-default">
-      <%= link_to (image_tag p.image.url), send("#{p.category}_#{p.id}_path") %>
+      <%= link_to (image_tag p.image.url(:display)), send("#{p.category}_#{p.id}_path") %>
     </div>
   <% end %>
 </div>
