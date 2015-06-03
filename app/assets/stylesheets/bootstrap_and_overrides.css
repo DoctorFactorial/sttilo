@@ -41,7 +41,6 @@
 #masonry-container img {
   border-radius: 5px 5px 00px 00px; 
 }
-
 .transitions-enabled > div:hover,
 .transitions-enabled > div:focus > .overlay {
     width:100%;
@@ -119,7 +118,7 @@
 }
  
 .btn-small {
-    background: #722f3f;
+    background: #8e5865;
     color: #ffffff !important;
 }
  
@@ -128,7 +127,7 @@
 }
  
 .btn-small:active, .btn-small.active {
-    background: #722f3f;
+    background: #8e5865;
     box-shadow: none;
 }
 
