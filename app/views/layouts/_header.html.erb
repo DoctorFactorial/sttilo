@@ -14,7 +14,7 @@
   </ul>
   </span>
   <span style='float: left'>
-    <% if current_user %>
+    <% if current_user.try(:admin?) %>
       <%= link_to 'Logout'.upcase, destroy_user_session_path, {:style => 'font-size:90%;', method: :delete, :class => 'headers'} %>
       &nbsp; // &nbsp; 
       <%= link_to "Pages".upcase, admin_pages_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_pages_path)}", id:'photosButton'}  %>
