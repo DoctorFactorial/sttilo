@@ -1,17 +1,19 @@
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "form-signin"}) do |f| %>
   <%= f.error_notification %>
 
-  <h3 class="text-center">Forgot your password?</h3>
+  <h3 class='sub-header text-center'>Forgot your password?</h3>
 
 
     <%= f.input :email, label: false, placeholder: 'Email', required: true, autofocus: true %>
 
     <%= f.button :submit, "Send me instructions", class: 'btn btn-primary btn-block' %>
-    <div class="text-left">
-    	<h5 class="sub-header">
-    <%= render "devise/shared/links" %>
-</h5>
-</div>
+
+	<div class='row col-md-8 col-md-offset-2'>
+		<div class="text-center links">
+			<%= render "devise/shared/links" %>
+		</div>
+	</div>
+
 <% end %>
 
 
