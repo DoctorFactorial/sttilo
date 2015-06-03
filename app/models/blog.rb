@@ -2,7 +2,8 @@ class Blog < ActiveRecord::Base
 	has_attached_file :image,
 		:styles => {
 			:thumb => "50x50#",
-			:display => "348x232>"
+			:display => "348x232>",
+			:content => "648x486>"
 		}
 
 	validates_attachment_content_type :image,

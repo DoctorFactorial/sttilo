@@ -9,7 +9,11 @@ ready = ->
 	    $('#posts').masonry
 	      itemSelector: '.box'
 	      isFitWidth: true
-
+	$ ->
+	  $('#blogs').imagesLoaded ->
+	    $('#blogs').masonry
+	      itemSelector: '.box'
+	      isFitWidth: true
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
