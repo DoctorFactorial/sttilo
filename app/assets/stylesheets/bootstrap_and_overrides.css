@@ -38,6 +38,15 @@
   border-radius: 5px 5px 00px 00px; 
 }
 
+.transitions-enabled > div:hover,
+.transitions-enabled > div:focus > .overlay {
+    width:100%;
+    position:absolute;
+    background-color:#FFF;
+    opacity:0.6;
+    border-radius:5px 5px 00px 00px; 
+}
+
 /* vertical space alignment */
 .logo img{
   width:40%;
