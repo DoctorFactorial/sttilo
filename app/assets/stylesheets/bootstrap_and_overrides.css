@@ -74,6 +74,9 @@
 .shift_forms_up{
   margin-top: 42px;
 }
+.shift-up{
+  margin-top: 42px;
+}
 
 /* tables + navbar height decrease */
 .shift_tables_up{
