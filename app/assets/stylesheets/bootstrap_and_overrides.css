@@ -184,6 +184,13 @@ footer {
 }
 
 
+/* vertically align navigation for responsive */
+@media (max-width: 767px) {
+.navbar-toggle {
+  margin-top: -10px !important;  
+  margin-bottom: 25px !important;  
+}
+}
 
 
 /* center navigation */
