@@ -1,6 +1,9 @@
+
 <div class='row col-md-8 col-md-offset-2'>
+	<div class='container'>
 	<h2 class='blog_post_title'><%= @subpage.name %></h2>
 	<p class='blog_date'><%= @subpage.created_at.strftime("%A, %d %b %Y") %></p>
+	</div>
 	<%= render 'pages/photos' %>
 </div>
 
