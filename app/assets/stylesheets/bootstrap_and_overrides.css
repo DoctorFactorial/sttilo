@@ -191,7 +191,9 @@ footer {
   margin-bottom: 25px !important;  
 }
 }
-
+ul.nav.navbar-nav {
+  margin-top: 20px;
+}
 
 /* center navigation */
  .nav.navbar-nav {
