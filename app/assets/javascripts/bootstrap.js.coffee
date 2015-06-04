@@ -14,8 +14,6 @@ ready = ->
 	    $('#blogs').masonry
 	      itemSelector: '.box'
 	      isFitWidth: true
-	      isRTL: true
-	      isOriginTop: false
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
