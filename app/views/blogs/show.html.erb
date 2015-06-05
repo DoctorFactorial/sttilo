@@ -1,20 +1,22 @@
-<div class='container'>
-<div class='row-fluid col-md-8 col-md-offset-2'>
-
-	<h2 class='blog_post_title'><%= @blog.name %></h2>
-	<p class='blog_date'><%= @blog.created_at.strftime("%A, %d %b %Y") %></p>
-	<%= image_tag @blog.image.url(:content), class: 'img-responsive' %>
-	<br><br>
-	<div class='texts'><%= raw RedCloth.new(@blog.content).to_html %></div>	
-	<br>
-</div>
-
-<div class='row col-md-8 col-md-offset-2'>
-	<div class="text-center links">
-		<% if current_user.try(:admin?) %>
-		<%= link_to 'Edit', edit_blog_path(@blog) %> |
-		<% end %>
-		<%= link_to 'Back', url_for(:back) %>
+<div class='container-fluid'>
+<div class='row'>
+	<div class='col-md-2'></div>
+	<div class='col-md-8'>
+		<div>
+			<h2 class='blog_post_title text-center'><%= @blog.name %></h2>
+			<p class='blog_date text-center'><%= @blog.created_at.strftime("%A, %d %b %Y") %></p>
+			<center><%= image_tag @blog.image.url(:content), class: 'img-responsive' %></center>
+			<br><br>
+			<div class='texts'><%= raw RedCloth.new(@blog.content).to_html %></div>	
+		</div>
+		<br>
+		<div class="text-center links">
+			<% if current_user.try(:admin?) %>
+			<%= link_to 'Edit', edit_blog_path(@blog) %> |
+			<% end %>
+			<%= link_to 'Back', url_for(:back) %>
+		</div>
 	</div>
+	<div class='col-md-2'></div>
 </div>
 </div>
