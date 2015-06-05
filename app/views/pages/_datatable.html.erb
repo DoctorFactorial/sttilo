@@ -42,11 +42,12 @@
         			<td><%= button_to 'Edit', edit_path, method: :get, class: 'btn btn-small' %></td>
         			<td><%= button_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-small' %></td>
 					</tr>
+
 				<% end %>
 			</tbody>
 		</table>
-
+		
 	</div>
 </div>
-
+<center><%= will_paginate @items, renderer: BootstrapPagination::Rails %></center>
 
