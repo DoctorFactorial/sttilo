@@ -10,7 +10,7 @@
 #search-form {
   color:#722f3f;
 }
-.form-control {
+#search.form-control {
     display:inline;
     width:auto;
 }

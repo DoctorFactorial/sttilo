@@ -2,9 +2,9 @@
 <h4 class="sub-header">
 <%= @photo.name %> | <%= @photo.category %>
 </h4>
-
+<br>
   <%= image_tag @photo.image.url(:content), class: 'img-responsive' %>
-
+<br>
 <div class='row col-md-8 col-md-offset-2'>
 	<div class="text-center links">
 		<% if current_user.try(:admin?) %>
