@@ -6,6 +6,11 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+/* Search */
+#search-form {
+  color:#722f3f;
+}
+
 /* Pagination */
 .pagination>li>a,.pagination>li>a:hover,.pagination>li>a:focus, .pagination>li>span {
   color: #722F3F;
