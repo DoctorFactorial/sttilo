@@ -20,4 +20,8 @@ class Blog < ActiveRecord::Base
 	def reload_routes
 		DynamicRouter.reload
 	end
+
+	def self.search(query)
+	  where('name like :query OR category like :query', query: "%#{query}%")
+	end
 end
