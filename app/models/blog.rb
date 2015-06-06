@@ -4,7 +4,8 @@ class Blog < ActiveRecord::Base
 			:thumb => "50x50#",
 			:display => "348x>",
 			:content => "648x>"
-		}
+		},
+		:processors => [:thumbnail, :compression]
 
 	validates_attachment_content_type :image,
 	content_type: /^image\/(png|gif|jpeg)/,

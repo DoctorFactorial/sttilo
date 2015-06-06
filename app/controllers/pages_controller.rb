@@ -22,7 +22,7 @@ class PagesController < ApplicationController
 
   def admin_blog
     if params[:search]
-      @items = Photo.all.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+      @items = Blog.all.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
     else
       @items = Blog.all.paginate(:page => params[:page], :per_page => 10)
     end

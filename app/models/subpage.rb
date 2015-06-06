@@ -3,7 +3,8 @@ class Subpage < ActiveRecord::Base
 		:styles => {
 			:thumb => "50x50#",
 			:display => "348x232>"
-		}
+		},
+		:processors => [:thumbnail, :compression]
 
 	validates_attachment_content_type :image,
 	content_type: /^image\/(png|gif|jpeg)/,
