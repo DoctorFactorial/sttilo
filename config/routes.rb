@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   DynamicBlogRouter.load
   resources :blogs, :except => ['show', 'update', 'destroy']
-  get    'blogs/:id' => 'blogs#show', :as => 'show_blogs'
+  get    'blogs/:id' => 'blogs#show', :as => 'show_blog'
   put    'blogs/:id' => 'blogss#update'
   delete 'blogs/:id' => 'blogs#destroy'
 

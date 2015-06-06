@@ -4,7 +4,7 @@
 
 <div class='row col-md-8 col-md-offset-2'>
 	<div class="text-center links">
-		<%= link_to 'Show', @blog %> |
+		<%= link_to 'Show', send("blog_#{@blog.id}_path") %> |
 		<%= link_to 'Back', url_for(:back) %>
 	</div>
 </div>
