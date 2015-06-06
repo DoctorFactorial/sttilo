@@ -9,7 +9,11 @@ class PagesController < ApplicationController
   end
 
   def admin_pages
-    @items = Subpage.all.paginate(:page => params[:page], :per_page => 5)
+    if params[:search]
+      @items = Subpage.all.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+    else
+      @items = Subpage.all.paginate(:page => params[:page], :per_page => 5)
+    end
   end
 
   def admin_blog
