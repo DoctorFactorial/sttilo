@@ -80,6 +80,7 @@
 .logo img{
   width:40%;
 }
+
 .logo{
   position: relative;
   top: -20px;
@@ -223,6 +224,12 @@ footer {
 nav.navbar.navbar-default{
   height: 50px;
 }
+/* vertical space alignment */
+.logo img{
+  position:relative;
+  left: 60px;
+}
+
 }
 /* vertically align navigation for responsive */
 @media (max-width: 767px) {

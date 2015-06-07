@@ -14,24 +14,34 @@
   </ul>
   </span>
   <span style='float: left'>
-    <% if current_user.try(:admin?) %>
-      <%= link_to 'Logout'.upcase, destroy_user_session_path, {:style => 'font-size:90%;', method: :delete, :class => 'headers'} %>
-      &nbsp; // &nbsp; 
-      <%= link_to "Subpages".upcase, admin_pages_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_pages_path)}", id:'photosButton'}  %>
-      &nbsp; // &nbsp; 
-      <%= link_to "Photos".upcase, admin_photos_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_photos_path)}"} %>
-      &nbsp; // &nbsp; 
-      <%= link_to "Blog".upcase, admin_blog_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_blog_path)}"} %>
-    <% else %>
-      <%= link_to 'Login'.upcase, new_user_session_path, {:style => 'font-size:90%;color:white;', :class => 'headers'} %>
-    <% end %>
+  <% if current_user.try(:admin?) %>
+    <%= link_to 'Logout'.upcase, destroy_user_session_path, {:style => 'font-size:90%;', method: :delete, :class => 'headers'} %>
+    &nbsp; // &nbsp; 
+    <%= link_to "Subpages".upcase, admin_pages_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_pages_path)}", id:'photosButton'}  %>
+    &nbsp; // &nbsp; 
+    <%= link_to "Photos".upcase, admin_photos_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_photos_path)}"} %>
+    &nbsp; // &nbsp; 
+    <%= link_to "Blog".upcase, admin_blog_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_blog_path)}"} %>
+  <% else %>
+    <%= link_to 'Login'.upcase, new_user_session_path, {:style => 'font-size:90%;color:white;', :class => 'headers'} %>
+  <% end %>
   </span>
-  </nav>
-    
+  <br>
+  <div style='float: right; margin: 10px -120px 0 0;overflow-y: auto;'>
+    <ul>
+      <%= 'en' %>
+      &nbsp;
+      <%= '|' %>
+      &nbsp;
+      <%= 'es' %>
+    </ul>
+  </siv>
+  </nav>    
 </div>
 
+
 <!-- Company Logo -->
-<div class="logo"><%= link_to image_tag('logotipo.png', alt: 'root'), root_path %></div>
+<div class="logo"><%= link_to image_tag('logotipo.png', alt: 'root'), root_path%></div>
 
 <!-- Navigation Bar -->
 <nav class="navbar navbar-default">
