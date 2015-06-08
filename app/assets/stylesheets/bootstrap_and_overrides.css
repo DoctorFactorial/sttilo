@@ -49,6 +49,11 @@
   text-align: left;
   font-family: 'Merriweather', serif;
 }
+.blog_date_subpages{
+  color: #722f3f;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
 .blog_post_title{
   font-family: 'Raleway', sans-serif;
 }

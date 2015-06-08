@@ -10,6 +10,15 @@ class Subpage < ActiveRecord::Base
 	content_type: /^image\/(png|gif|jpeg)/,
 	message: "Only images allowed"
 
+	auto_html_for :content  do
+		html_escape
+		image
+		youtube(:width => "100%", :height => "250", :autoplay => false)
+		vimeo(:width => "100%", :height => "250", :autoplay => false)	
+		link	:target => "_blank", :rel => "nofollow"
+		simple_format
+	end
+
 	validates :image, attachment_presence: true
 	
 	extend FriendlyId

@@ -4,10 +4,12 @@
 	<div class='col-md-8'>
 		<div>
 			<h2 class='blog_post_title text-center'><%= @blog.name %></h2>
-			<p class='blog_date text-center'><%= I18n.l @blog.created_at %></p>
+			<p class='blog_date_subpages'><%= I18n.l @blog.created_at %></p>
 			<center><%= image_tag @blog.image.url(:content), class: 'img-responsive' %></center>
 			<br><br>
-			<div class='texts'><%= raw RedCloth.new(@blog.content).to_html %></div>	
+			<% if @blog.content_html %>
+			<div class='texts'><%= raw RedCloth.new(@blog.content_html).to_html %></div>	
+			<% end %>
 		</div>
 		<br>
 		<div class="text-center links">

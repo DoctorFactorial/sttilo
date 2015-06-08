@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150602133305) do
+ActiveRecord::Schema.define(version: 20150608145237) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150602133305) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.text     "content"
+    t.text     "content_html"
   end
 
   add_index "blogs", ["slug"], name: "index_blogs_on_slug", unique: true
@@ -98,6 +99,7 @@ ActiveRecord::Schema.define(version: 20150602133305) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.text     "content_html"
   end
 
   add_index "subpages", ["slug"], name: "index_subpages_on_slug", unique: true
