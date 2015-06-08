@@ -4,7 +4,7 @@
 	<div class='col-md-8'>
 		<div>
 			<h2 class='blog_post_title text-center'><%= @subpage.name %></h2>
-			<p class='blog_date'><%= @subpage.created_at.strftime("%A, %d %b %Y") %></p>
+			<p class='blog_date'><%= I18n.l @subpage.created_at %></p>
 			<%= render 'pages/photos' %>
 		</div>
 		<%= @subpage.content %>
