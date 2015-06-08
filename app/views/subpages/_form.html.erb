@@ -5,6 +5,7 @@
     <%= f.input :name, label: false, placeholder: 'Name' %>
     <%= f.input :category, label: false, collection: ['home', 'weddings', 'lifestyle', 'album', 'about'], prompt: "Select Page Category" %>
     <%= f.input :image, label: false %>
+    <%= f.input :content, label: false, placeholder: "Content" %>
     <div class="form-actions">
       <%= f.button :submit, :class => "btn-primary btn-block" %>
     </div>

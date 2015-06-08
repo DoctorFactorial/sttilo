@@ -7,7 +7,9 @@
 			<p class='blog_date'><%= @subpage.created_at.strftime("%A, %d %b %Y") %></p>
 			<%= render 'pages/photos' %>
 		</div>
+		<%= @subpage.content %>
 	</div>
+	<br>
 	<div class='col-md-2'></div>
 </div>
 <div class='row'>
