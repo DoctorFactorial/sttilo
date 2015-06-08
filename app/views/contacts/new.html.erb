@@ -4,13 +4,13 @@
   <%= f.error_notification %>
   <div class='col-md-6 col-md-offset-3'>
 	  <div class="form-inputs">
-	    <%= f.input :name, label: false, placeholder: 'Name' %>
-	    <%= f.input :email, label: false, placeholder: 'Email' %>
-	    <%= f.input :message, label: false, placeholder: 'Message', :as => :text, :required => false, :input_html => {:rows => 5} %>
+	    <%= f.input :name, label: false, placeholder: t('contact.name') %>
+	    <%= f.input :email, label: false, placeholder: t('contact.email') %>
+	    <%= f.input :message, label: false, placeholder: t('contact.message'), :as => :text, :required => false, :input_html => {:rows => 5} %>
 	  </div>
 
 	  <div class="form-actions">
-	    <%= f.button :submit, 'Send Message', :class => "btn-primary btn-block" %>
+	    <%= f.button :submit, t('contact.send_message'), :class => "btn-primary btn-block" %>
 	  </div>
   </div>
 <% end %>

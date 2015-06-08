@@ -21,3 +21,16 @@
 
 en:
   hello: "Hello world"
+  menu:
+    weddings: "Weddings"
+    lifestyle: "lifestyle"
+    album: "Album"
+    about: "About"
+    blog: "Blog"
+    contact: "Contact"
+  coming_soon: "Coming soon...!"
+  contact:
+    name: "Name"
+    email: "Email"
+    message: "Message"
+    send_message: "Send Message"

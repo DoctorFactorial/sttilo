@@ -227,7 +227,7 @@ nav.navbar.navbar-default{
 /* vertical space alignment */
 .logo img{
   position:relative;
-  left: 60px;
+  left: 70px;
 }
 
 }
@@ -342,6 +342,14 @@ a:active {
     text-decoration: underline;
 }
 
+.active > a, 
+.active > a:hover, 
+.active > a:focus {
+    color: #000;
+    background-color: #FFF;
+    text-decoration: underline;
+}
+
 .active_header,
 .active_header :hover,
 .active_header :focus {
@@ -355,6 +363,17 @@ a:active {
 .navbar-default .navbar-nav > .open > a:focus {
     color: #000;
     background-color: #FFF;
+}
+
+#language_menu {
+  float: right; 
+  margin: 10px 0 0 0;
+  font-size:90%;
+}
+
+
+#language_menu li{
+  display: inline;
 }
 
 @media (max-width: 767px) {

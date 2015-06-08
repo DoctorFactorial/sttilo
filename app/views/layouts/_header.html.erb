@@ -1,19 +1,19 @@
 <!-- Social Media Icons -->
-
 <nav class="navbar navbar-default">
   <div class="container-fluid", style="margin:10px 10px 0 0;">
-    <span style='float: right'>
-      <ul>
-    <%= link_to "<i class='fa fa-twitter'></i>".html_safe, 'https://twitter.com/sttilophoto' %>
-    &nbsp;
-    <%= link_to "<i class='fa fa-facebook'></i>".html_safe, 'https://www.facebook.com/sttiloweddingphotography' %>
-    &nbsp;
-    <%= link_to "<i class='fa fa-instagram'></i>".html_safe, 'http://www.enjoygram.com/sttiloweddingphotography' %>
-    &nbsp;
-    <%= link_to "<i class='fa fa-pinterest'></i>".html_safe, 'https://www.pinterest.com/sttilow/' %>
-  </ul>
-  </span>
-  <span style='float: left'>
+
+  <div id="language_menu">
+<ul style='display:in-line;list-style-type:none;'>
+<li class=<%= 'active' if I18n.locale == I18n.default_locale %>>
+  <%= link_to "EspaÑol".upcase, :locale=>'es' %>
+</li> 
+&nbsp;|&nbsp;
+<li class=<%= 'active' if I18n.locale != I18n.default_locale %>>
+  <%= link_to "English".upcase, :locale=>'en' %>
+</li>
+</ul>
+  </div>
+  <span style='float: left;margin: 10px 0 0 0;'>
   <% if current_user.try(:admin?) %>
     <%= link_to 'Logout'.upcase, destroy_user_session_path, {:style => 'font-size:90%;', method: :delete, :class => 'headers'} %>
     &nbsp; // &nbsp; 
@@ -27,18 +27,21 @@
   <% end %>
   </span>
   <br>
-  <div style='float: right; margin: 10px -120px 0 0;overflow-y: auto;'>
-    <ul>
-      <%= 'en' %>
-      &nbsp;
-      <%= '|' %>
-      &nbsp;
-      <%= 'es' %>
-    </ul>
-  </siv>
+  <br>
+    <span style='float: right'>
+      <ul>
+    <%= link_to "<i class='fa fa-twitter'></i>".html_safe, 'https://twitter.com/sttilophoto' %>
+    &nbsp;
+    <%= link_to "<i class='fa fa-facebook'></i>".html_safe, 'https://www.facebook.com/sttiloweddingphotography' %>
+    &nbsp;
+    <%= link_to "<i class='fa fa-instagram'></i>".html_safe, 'http://www.enjoygram.com/sttiloweddingphotography' %>
+    &nbsp;
+    <%= link_to "<i class='fa fa-pinterest'></i>".html_safe, 'https://www.pinterest.com/sttilow/' %>
+  </ul>
+  </span>
+  
   </nav>    
 </div>
-
 
 <!-- Company Logo -->
 <div class="logo"><%= link_to image_tag('logotipo.png', alt: 'root'), root_path%></div>
@@ -60,12 +63,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-      	<li class=<%= 'active' if current_page?(weddings_path) %>><%= link_to 'Weddings'.html_safe.upcase, weddings_path, :class => 'headers' %></li>
-        <li class=<%= 'active' if current_page?(lifestyle_path) %>><%= link_to 'Lifestyle'.upcase, lifestyle_path, :class => 'headers' %></li>
-      	<li class=<%= 'active' if current_page?(album_path) %>><%= link_to 'Album'.upcase, album_path, :class => 'headers' %></li>
-      	<li class=<%= 'active' if current_page?(about_path) %>><%= link_to 'About'.upcase, about_path, :class => 'headers' %></li>
-      	<li class=<%= 'active' if current_page?(blog_path) %>><%= link_to 'Blog'.upcase, blog_path, :class => 'headers' %></li>
-      	<li class=<%= 'active' if current_page?(contact_path) %>><%= link_to 'Contact'.upcase, contact_path, :class => 'headers' %></li>
+      	<li class=<%= 'active' if current_page?(weddings_path) %>><%= link_to t('menu.weddings').upcase, weddings_path, :class => 'headers' %></li>
+        <li class=<%= 'active' if current_page?(lifestyle_path) %>><%= link_to t('menu.lifestyle').upcase, lifestyle_path, :class => 'headers' %></li>
+      	<li class=<%= 'active' if current_page?(album_path) %>><%= link_to t('menu.album').upcase, album_path, :class => 'headers' %></li>
+      	<li class=<%= 'active' if current_page?(about_path) %>><%= link_to t('menu.about').upcase, about_path, :class => 'headers' %></li>
+      	<li class=<%= 'active' if current_page?(blog_path) %>><%= link_to t('menu.blog').upcase, blog_path, :class => 'headers' %></li>
+      	<li class=<%= 'active' if current_page?(contact_path) %>><%= link_to t('menu.contact').upcase, contact_path, :class => 'headers' %></li>
 
 
       </ul>
