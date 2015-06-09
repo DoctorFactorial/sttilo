@@ -76,4 +76,7 @@ gem 'masonry-rails', '~> 0.2.4'
 # Create friendly urls
 gem 'friendly_id'
 
+# Redcloth - Markup for dynamic subpages
+gem 'RedCloth', '~> 4.2.9'
+
 

@@ -10,6 +10,9 @@ class SubpagesController < ApplicationController
   # GET /subpages/1
   # GET /subpages/1.json
   def show
+    @subpage = Subpage.find(params[:id])
+    raise ActiveRecord::RecordNotFound, "Page not found" if @subpage.nil?
+  
   end
 
   # GET /subpages/new
