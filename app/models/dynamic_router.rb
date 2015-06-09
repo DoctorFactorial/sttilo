@@ -3,7 +3,7 @@ class DynamicRouter
 		Sttilophoto::Application.routes.draw do 
 			Subpage.all.each do |sp|
 				puts "Routing #{sp.name}"
-				category = if sp.category.nil? then '' else '/' + sp.category end
+				category = if sp.category.nil? then '' else '/' + sp.category.downcase end
 				get "#{category}/#{sp.name}", :to => "subpages#show", defaults: {id: sp.id}
 			end
 		end

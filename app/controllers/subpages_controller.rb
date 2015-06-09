@@ -71,6 +71,6 @@ class SubpagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subpage_params
-      params.require(:subpage).permit(:name, :content)
+      params.require(:subpage).permit(:name, :content, :category)
     end
 end
