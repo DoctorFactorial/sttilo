@@ -6,6 +6,16 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+/* headers */
+.headers {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* texts */
+.texts{
+  font-family: 'Merriweather', serif;
+}
 
 /* btn */
 .btn {
