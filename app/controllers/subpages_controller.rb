@@ -11,6 +11,7 @@ class SubpagesController < ApplicationController
   # GET /subpages/1.json
   def show
     @subpage = Subpage.friendly.find(params[:id])
+    redirect_to not_found_path unless @subpage
   end
 
   # GET /subpages/new

@@ -2,12 +2,6 @@ Rails.application.routes.draw do
 
   resources :subpages
 
-  Subpage.all.each do |sp|
-    category = if sp.category.nil? then '' else '/' + sp.category end
-    puts "Routing #{sp.name}"
-    get "#{category}/#{sp.name}", :to => "subpages#show", defaults: { id: sp.id }
-  end
-
   devise_for :admins
   resources :photos
 
@@ -22,6 +16,8 @@ Rails.application.routes.draw do
   get 'travel' => 'pages#travel'
   get 'communion' => 'pages#communion'
   get 'dashboard' => 'pages#dashboard'
+
+  DynamicRouter.load
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
