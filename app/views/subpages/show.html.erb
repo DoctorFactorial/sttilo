@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @subpage.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @subpage.content %>
+</p>
+
+<%= link_to 'Edit', edit_subpage_path(@subpage) %> |
+<%= link_to 'Back', subpages_path %>
