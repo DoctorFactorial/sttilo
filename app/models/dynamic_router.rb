@@ -4,7 +4,8 @@ class DynamicRouter
 			Subpage.all.each do |sp|
 				puts "Routing #{sp.name}"
 				category = if sp.category.nil? then '' else '/' + sp.category.downcase end
-				get "#{category}/#{sp.name}", :to => "subpages#show", defaults: {id: sp.id}
+				route = if sp.category.nil? then 'newpage_' + sp.id.to_s else sp.category.downcase + '_' + sp.id.to_s end
+				get "#{category}/#{sp.name}", :to => "subpages#show", as: route, defaults: {id: sp.id}
 			end
 		end
 	end
