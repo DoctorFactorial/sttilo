@@ -19,4 +19,8 @@ class Subpage < ActiveRecord::Base
 	def reload_routes
 		DynamicRouter.reload
 	end
+
+	def self.search(query)
+	  where("name like ?", "%#{query}%") 
+	end
 end
