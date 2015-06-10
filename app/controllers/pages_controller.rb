@@ -13,30 +13,30 @@ class PagesController < ApplicationController
   end
 
   def blog
-    @photos = Photo.where(category: 'Blog')
+    @photos = Photo.where(category: 'BLOG')
   end
 
   def about
-    @photos = Photo.where(category: 'About')
+    @photos = Photo.where(category: 'ABOUT')
   end
 
   def contact
-    @photos = Photo.where(category: 'Contact')
+    @photos = Photo.where(category: 'CONTACT')
   end
 
   def album
-    @photos = Photo.where(category: 'Album')
+    @photos = Photo.where(category: 'ALBUM')
   end
 
   def weddings
-    @photos = Photo.where(category: 'Weddings')
+    @photos = Photo.where(category: 'WEDDINGS')
   end
 
   def travel
-    @photos = Photo.where(category: 'Travel')
+    @photos = Photo.where(category: 'TRAVEL')
   end
 
   def communion
-    @photos = Photo.where(category: 'Communion')
+    @photos = Photo.where(category: 'COMMUNION')
   end
 end
