@@ -237,6 +237,14 @@ a:active {
     text-decoration: underline;
 }
 
+.active_header,
+.active_header :hover,
+.active_header :focus {
+    color: #000;
+    background-color: #FFF;
+    text-decoration: underline;
+}
+
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {

@@ -17,11 +17,11 @@
     <% if current_user %>
       <%= link_to 'Logout'.upcase, destroy_user_session_path, {:style => 'font-size:90%;', method: :delete, :class => 'headers'} %>
       &nbsp; // &nbsp; 
-      <%= link_to "Subpages".upcase, admin_pages_path, {:style => 'font-size:90%;', :class => 'headers', id:'photosButton'}  %>
+      <%= link_to "Subpages".upcase, admin_pages_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_pages_path)}", id:'photosButton'}  %>
       &nbsp; // &nbsp; 
-      <%= link_to "Photos".upcase, admin_photos_path, {:style => 'font-size:90%;', :class => 'headers'} %>
+      <%= link_to "Photos".upcase, admin_photos_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_photos_path)}"} %>
       &nbsp; // &nbsp; 
-      <%= link_to "Blog".upcase, admin_blog_path, {:style => 'font-size:90%;', :class => 'headers'} %>
+      <%= link_to "Blog".upcase, admin_blog_path, {:style => 'font-size:90%;', :class => "headers #{'active_header' if current_page?(admin_blog_path)}"} %>
     <% else %>
       <%= link_to 'Login'.upcase, new_user_session_path, {:style => 'font-size:90%;color:white;', :class => 'headers'} %>
     <% end %>

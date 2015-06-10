@@ -1,9 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-    if current_user && current_user.admin?
-      redirect_to dashboard_path
-    end
+    redirect_to weddings_path
     @subpages = Subpage.where(category: 'home page')
   end
 
