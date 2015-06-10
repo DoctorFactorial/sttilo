@@ -12,4 +12,8 @@ class Photo < ActiveRecord::Base
 	message: "Only images allowed"
 
 	validates :image, attachment_presence: true
+
+	def self.search(query)
+	  where('name like :query OR category like :query', query: "%#{query}%")
+	end
 end

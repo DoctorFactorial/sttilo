@@ -21,6 +21,6 @@ class Subpage < ActiveRecord::Base
 	end
 
 	def self.search(query)
-	  where("name like ?", "%#{query}%") 
+	  where('name like :query OR category like :query', query: "%#{query}%")
 	end
 end

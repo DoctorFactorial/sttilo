@@ -1,10 +1,5 @@
 <div class='row'>
 	<div class='col-md-10 col-md-offset-1'>
-		<%= form_tag(admin_pages_path, :method => "get", id: "search-form") do %>
-		  <%= text_field_tag :search, params[:search], placeholder: "Search" %>
-		  <%= submit_tag "Search", :name => nil %>
-		<% end %>
-
 		<table class='table'>
 			<thead>
 				<tr>
