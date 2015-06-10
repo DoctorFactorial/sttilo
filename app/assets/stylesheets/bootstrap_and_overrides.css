@@ -112,7 +112,7 @@
 }
  
 .btn-small {
-    background: #722f3f;
+    background: #8e5865;
     color: #ffffff !important;
 }
  
@@ -121,7 +121,7 @@
 }
  
 .btn-small:active, .btn-small.active {
-    background: #722f3f;
+    background: #8e5865;
     box-shadow: none;
 }
 
