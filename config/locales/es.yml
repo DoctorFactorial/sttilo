@@ -1,0 +1,15 @@
+es:
+  hello: "Hola, mundo!"
+  menu:
+    weddings: "Bodas"
+    lifestyle: "Estilo de vida"
+    album: "Álbum"
+    about: "Sobre nosotros"
+    blog: "Blog"
+    contact: "Contacto"
+  coming_soon: "Próximamente"
+  contact:
+    name: "Nombre"
+    email: "Email"
+    message: "Mensanje"
+    send_message: "Enviar Mensanje" 

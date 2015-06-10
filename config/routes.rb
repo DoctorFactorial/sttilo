@@ -1,34 +1,35 @@
 Rails.application.routes.draw do
 
-  DynamicBlogRouter.load
-  resources :blogs, :except => ['show', 'update', 'destroy']
-  get    'blogs/:id' => 'blogs#show', :as => 'show_blog'
-  put    'blogs/:id' => 'blogss#update'
-  delete 'blogs/:id' => 'blogs#destroy'
+  scope "(:locale)", :locale => /en|es/ do  
+    DynamicBlogRouter.load
+    resources :blogs, :except => ['show', 'update', 'destroy']
+    get    'blogs/:id' => 'blogs#show', :as => 'show_blog'
+    put    'blogs/:id' => 'blogss#update'
+    delete 'blogs/:id' => 'blogs#destroy'
 
-  DynamicRouter.load
-  resources :subpages
+    DynamicRouter.load
+    resources :subpages
 
-  resources 'contacts', only: [:new, :create]
-  get 'contact' => 'contacts#new'
+    resources 'contacts', only: [:new, :create]
+    get 'contact' => 'contacts#new'
 
-  devise_for :admins
-  resources :photos
+    devise_for :admins
+    resources :photos
 
-  devise_for :users
-  root 'pages#home'
+    devise_for :users
+    root 'pages#home'
 
-  get 'blog' => 'pages#blog'
-  get 'about' => 'pages#about'
+    get 'blog' => 'pages#blog'
+    get 'about' => 'pages#about'
   
-  get 'album' => 'pages#album'
-  get 'weddings' => 'pages#weddings'
-  get 'lifestyle' => 'pages#lifestyle'
+    get 'album' => 'pages#album'
+    get 'weddings' => 'pages#weddings'
+    get 'lifestyle' => 'pages#lifestyle'
 
-  get 'admin/photos' => 'pages#admin_photos'
-  get 'admin/pages' => 'pages#admin_pages'
-  get 'admin/blog' => 'pages#admin_blog'
-  
+    get 'admin/photos' => 'pages#admin_photos'
+    get 'admin/pages' => 'pages#admin_pages'
+    get 'admin/blog' => 'pages#admin_blog'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
