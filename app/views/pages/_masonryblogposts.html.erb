@@ -5,7 +5,7 @@
       <div class='container' id='blogs'>
       	<h3 class='blog_title'> <%= b.name %> </h3>
 	      <p class='blog_date'>
-	      <%= b.created_at.strftime("%A, %d %b %Y") %> 
+	      <%= I18n.l b.created_at %> 
 	      </p>
 	  </div>
     </div>
