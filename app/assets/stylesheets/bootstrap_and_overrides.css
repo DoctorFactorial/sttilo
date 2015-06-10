@@ -1,378 +1,392 @@
 /*
-  =require twitter-bootstrap-static/bootstrap
+   =require twitter-bootstrap-static/bootstrap
+ 
+   Use Font Awesome icons (default)
+   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+   =require twitter-bootstrap-static/fontawesome
+   */
+ 
+ /* Search */
+ #search-form {
+   color:#722f3f;
+ }
+ #search.form-control {
+     display:inline;
+     width:auto;
+ }
+ 
+ /* Pagination */
+ .pagination>li>a,.pagination>li>a:hover,.pagination>li>a:focus, .pagination>li>span {
+   color: #722F3F;
+ }
+ 
+ .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+   background-color: #8E5865;
+   border-color: #8E5865;
+ }
+ 
+ .pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
+   cursor: not-allowed;
+ }
+ 
+ 
+ /* contacts form in-line */
+ .form-inline div { display: inline-block }
+ 
+ /* 'Coming soon!' text */
+ #coming_soon {
+   color: #722f3f;
+ }
+ 
+ /* blog */
+ .blog_title{
+   margin-top: 10px;
+   text-align: left;
+   font-family: 'Raleway', sans-serif;
+ }
+ .blog_date{
+   color: #722f3f;
+   text-align: center;
+   font-family: 'Merriweather', serif;
+ }
+ .blog_post_title{
+   font-family: 'Raleway', sans-serif;
+ }
+ .blog_post_content{
+   font-family: 'Merriweather', serif;
+   color:red;
+ }
+ 
+ .links {
+   font-family: 'Raleway', sans-serif;
+   text-transform: uppercase;
+   font-size: 85%;
+ }
+ 
+ /* masonry boxes */
+ #masonry-container img {
+   border-radius: 5px 5px 00px 00px; 
+ }
+ .transitions-enabled > div:hover,
+ .transitions-enabled > div:focus > .overlay {
+     width:100%;
+     position:absolute;
+     background-color:#FFF;
+     opacity:0.6;
+     border-radius:5px 5px 00px 00px; 
+ }
+ 
+ /* vertical space alignment */
+ .logo img{
+   width:40%;
+ }
 
-  Use Font Awesome icons (default)
-  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
-  =require twitter-bootstrap-static/fontawesome
-  */
-
-/* Search */
-#search-form {
-  color:#722f3f;
-}
-
-#search.form-control {
-  display:inline;
-  width:auto;
-}
-
-/* Pagination */
-.pagination>li>a,.pagination>li>a:hover,.pagination>li>a:focus, .pagination>li>span {
-  color: #722F3F;
-}
-
-.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
-  background-color: #8E5865;
-  border-color: #8E5865;
-}
-
-.pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
-  cursor: not-allowed;
-}
-
-/* contacts form in-line */
-.form-inline div { display: inline-block }
-
-
-/* 'Coming soon!' text */
-#coming_soon {
-  color: #722f3f;
-}
-
-
-/* blog */
-.blog_title{
-  margin-top: 10px;
-  text-align: left;
-  font-family: 'Merriweather', serif;
-}
-.blog_date{
-  color: #722f3f;
-  text-align: center;
-  font-family: 'Merriweather', serif;
-}
-
-.links {
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  font-size: 85%;
-}
-
-/* masonry boxes */
-#masonry-container img {
-  border-radius: 5px 5px 00px 00px; 
-}
-
-.transitions-enabled > div:hover,
-.transitions-enabled > div:focus > .overlay {
-    width:100%;
-    position:absolute;
-    background-color:#FFF;
-    opacity:0.6;
-    border-radius:5px 5px 00px 00px; 
-}
-
+ .logo{
+   position: relative;
+   top: -20px;
+ }
+ .nav.navbar-nav, .nav.navbar-toggle-collapsed {
+   position: relative;
+   top: -20px;
+  }
+ .gallery-up{
+   position: relative;
+   top: -20px;
+ }
+ /* forms */
+ .shift_forms_up{
+   margin-top: 42px;
+ }
+ .shift-up{
+   margin-top: 42px;
+ }
+ 
+ /* tables + navbar height decrease */
+ .shift_tables_up{
+   margin-top: 0px;
+ }
+ 
+ /* weddings images shift up*/
+ .shift_gallery_up{
+   margin-top: 52px;
+ }
+ 
+ .shift_about_up{
+   margin-top: 22px;
+ }
+ 
+ 
+ /* headers */
+ .headers {
+   font-family: 'Raleway', sans-serif;
+ }
+ 
+ /* texts */
+ .texts{
+   font-family: 'Merriweather', serif;
+ }
+ 
+ /* btn */
+ .btn {
+     padding: 14px 24px;
+     border: 0 none;
+     font-weight: 700;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+ }
+  
+ .btn:focus, .btn:active:focus, .btn.active:focus {
+     outline: 0 none;
+ }
+  
+ .btn-primary {
+     background: #722f3f;
+     color: #ffffff !important;
+ }
+  
+ .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+     background: #9c6d78;
+ }
+  
+ .btn-primary:active, .btn-primary.active {
+     background: #722f3f;
+     box-shadow: none;
+ }
+ 
+ .btn-small {
+     padding: 7px 12px;
+     border: 0 none;
+     font-weight: 250;
+     letter-spacing: 0.5px;
+     text-transform: uppercase;
+ }
+ 
+ .btn-small:focus, .btn-small:active:focus, .btn-small.active:focus {
+     outline: 0 none;
+ }
+  
+ .btn-small {
+     background: #8e5865;
+     color: #ffffff !important;
+ }
+  
+ .btn-small:hover, .btn-small:focus, .btn-small:active, .btn-small.active, .open > .dropdown-toggle.btn-primary {
+     background: #9c6d78;
+ }
+  
+ .btn-small:active, .btn-small.active {
+     background: #8e5865;
+     box-shadow: none;
+ }
+ 
+ /* simple-form */
+ h4.sub-header{
+   color: #722f3f;
+ }
+ 
+ h1.sub-header{
+   color: #722f3f;
+ }
+ 
+ /* footer */
+ /* make responsive */
+ @media (min-width: 768px) {
+ footer {
+   margin-top: 30px;
+   margin-bottom: 0;
+   padding-top: 5px;
+   color: #999;
+     margin-left:auto;
+     margin-right:auto;
+     width: 60%;
+       position: relative;
+   margin-top: 0px; /* negative value of footer height */
+   clear:both;
+   padding-top:20px;
+ }
+ }
+ 
+ @media (max-width: 767px) {
+ footer {
+   margin-bottom: 30px;
+   padding-top: 5px;
+   color: #999;
+     margin-left:auto;
+     margin-right:auto;
+     width: 60%;
+     position: relative;
+   padding-top:20px;
+ }
+ }
+ 
+ @media (min-width: 768px) {
+ /* toggled navigation */
+ nav.navbar.navbar-default{
+   height: 50px;
+ }
 /* vertical space alignment */
 .logo img{
-  width:40%;
+  position:relative;
+  left: 60px;
 }
-.logo{
-  position: relative;
-  top: -20px;
-}
-.nav.navbar-nav, .nav.navbar-toggle-collapsed {
-  position: relative;
-  top: -20px;
+
  }
-.gallery-up{
-  position: relative;
-  top: -20px;
-}
-
-/* forms */
-.shift_forms_up{
-  margin-top: 42px;
-}
-
-.shift-up{
-  margin-top: 42px;
-}
-
-/* tables + navbar height decrease */
-.shift_tables_up{
-  margin-top: 0px;
-}
-
-/* weddings images shift up*/
-.shift_gallery_up{
-  margin-top: 52px;
-}
-
-@media (min-width: 768px) {
-/* toggled navigation */
-nav.navbar.navbar-default{
-  height: 50px;
-}
-}
-
-.shift_about_up{
-  margin-top: 22px;
-}
-
-
-/* headers */
-.headers {
-  font-family: 'Raleway', sans-serif;
-}
-
-
-/* texts */
-.texts{
-  font-family: 'Merriweather', serif;
-}
-
-/* btn */
-.btn {
-    padding: 14px 24px;
-    border: 0 none;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
- 
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
-}
- 
-.btn-primary {
-    background: #722f3f;
-    color: #ffffff !important;
-}
- 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #9c6d78;
-}
- 
-.btn-primary:active, .btn-primary.active {
-    background: #722f3f;
-    box-shadow: none;
-}
-
-.btn-small {
-    padding: 7px 12px;
-    border: 0 none;
-    font-weight: 250;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.btn-small:focus, .btn-small:active:focus, .btn-small.active:focus {
-    outline: 0 none;
-}
- 
-.btn-small {
-    background: #8e5865;
-    color: #ffffff !important;
-}
- 
-.btn-small:hover, .btn-small:focus, .btn-small:active, .btn-small.active, .open > .dropdown-toggle.btn-primary {
-    background: #9c6d78;
-}
- 
-.btn-small:active, .btn-small.active {
-    background: #8e5865;
-    box-shadow: none;
-}
-
-/* simple-form */
-h4.sub-header{
-  color: #722f3f;
-}
-
-h1.sub-header{
-  color: #722f3f;
-}
-
-/* footer */
-/* make responsive */
-@media (min-width: 768px) {
-footer {
-  margin-top: 30px;
-  margin-bottom: 0;
-  padding-top: 5px;
-  color: #999;
-    margin-left:auto;
-    margin-right:auto;
-    width: 60%;
-      position: relative;
-  margin-top: 0px; /* negative value of footer height */
-  clear:both;
-  padding-top:20px;
-}
-}
-
-@media (max-width: 767px) {
-footer {
-  margin-bottom: 30px;
-  padding-top: 5px;
-  color: #999;
-    margin-left:auto;
-    margin-right:auto;
-    width: 60%;
-    position: relative;
-  padding-top:20px;
-}
-}
-
-/* vertically align navigation for responsive */
-@media (max-width: 767px) {
-.navbar-toggle {
-  margin-top: -90px !important;  
-  margin-bottom: 25px !important; 
-  }
-/* tables + navbar height decrease */
-.shift_tables_up{
-  margin-top: 0px;
-}
-/* weddings images shift up*/
-.shift_gallery_up{
-  margin-top: -35px; 
-}
-.shift_forms_up{
-  margin-top: -52px;
-}
-.shift_about_up{
-  margin-top: -32px;
-}
-}
-
-ul.nav.navbar-nav {
-  margin-top: 20px;
-}
-
-/* center navigation */
- .nav.navbar-nav {
-  float: left;
+ /* vertically align navigation for responsive */
+ @media (max-width: 767px) {
+ .navbar-toggle {
+   margin-top: -90px !important;  
+   margin-bottom: 25px !important;  
+   }
+ /* tables + navbar height decrease */
+ .shift_tables_up{
+   margin-top: 0px;
  }
- .nav.navbar-nav {
-     clear: left;
+ 
+ /* weddings images shift up*/
+ .shift_gallery_up{
+   margin-top: -35px;
+ }
+ 
+ .shift_forms_up{
+   margin-top: -52px;
+ }
+ 
+ 
+ .shift_about_up{
+   margin-top: -32px;
+ }
+ 
+ }
+ ul.nav.navbar-nav {
+   margin-top: 20px;
+ }
+ 
+ /* center navigation */
+  .nav.navbar-nav {
      float: left;
-     margin: 0;
-     padding: 0;
-     position: relative;
-     left: 50%;
-     text-align: center;
+  }
+  .nav.navbar-nav {
+      clear: left;
+      float: left;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      left: 50%;
+      text-align: center;
+  }
+  .nav.navbar-nav > li {
+      position: relative;
+      right: 50%;
+  }
+  .nav.navbar-nav li {
+     text-align: left
+  }
+ 
+ /* dashboard */
+ .thumbnail {
+     border: 0 none;
+     box-shadow: none;
  }
- .nav.navbar-nav > li {
-     position: relative;
-     right: 50%;
+ 
+ /* photos */
+ .thumb{
+     height:50px;
  }
- .nav.navbar-nav li {
-    text-align: left
+ 
+ 
+ /* place main logo in header */
+ div.logo {
+      margin-top:0px;
+      margin-bottom:30px;
+      text-align: center;
  }
-
-/* dashboard */
-.thumbnail {
-    border: 0 none;
-    box-shadow: none;
-}
-
-/* photos */
-.thumb{
-    height:50px;
-}
-
-
-/* place main logo in header */
-div.logo {
-     margin-top:0px;
-     margin-bottom:30px;
-     text-align: center;
-}
-
-/* colour icons in header */
-a:link { 
-  color: #000;
-}
-a:visited { 
-  color: #000;
-}
-a:hover { 
-  color: #555;
-}
-a:active { 
-  color: #000;
-}
-
-/* override navbar defaults */
-.navbar-default {
-    background-color: white;
-    border-color: white;
-}
-
-.container-fluid{
-    margin-bottom:40px;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: #000;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #555;
-    text-decoration: underline;
-}
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-    color: #000;
-    background-color: #FFF;
-    text-decoration: underline;
-}
-
-.active_header,
-.active_header :hover,
-.active_header :focus {
-    color: #000;
-    background-color: #FFF;
-    text-decoration: underline;
-}
-
-.navbar-default .navbar-nav > .open > a, 
-.navbar-default .navbar-nav > .open > a:hover, 
-.navbar-default .navbar-nav > .open > a:focus {
-    color: #000;
-    background-color: #FFF;
-}
-
-@media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: #777;
-    }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: #333;
-    }
-}
-
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-            background-image:none !important;
-        }
-        .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-            background-color:none;
-            text-decoration: underline;
-        }
-
-ul.nav a:active { 
-    color: #000 !important; 
-}
-
-ul.nav li.dropdown ul.dropdown-menu a:active{
-    color: #000 !important;    
-}
-
-.hermitage_gallery .thumbnails .span8{
-  list-style-type: none;
-  margin-left: -40px;
-
+ 
+ /* colour icons in header */
+ a:link { 
+   color: #000;
+ }
+ a:visited { 
+   color: #000;
+ }
+ a:hover { 
+   color: #555;
+ }
+ a:active { 
+   color: #000;
+ }
+ 
+ /* override navbar defaults */
+ .navbar-default {
+     background-color: white;
+     border-color: white;
+ }
+ 
+ .container-fluid{
+     margin-bottom:40px;
+ }
+ 
+ .navbar-default .navbar-nav > li > a {
+     color: #000;
+ }
+ 
+ .navbar-default .navbar-nav > li > a:hover,
+ .navbar-default .navbar-nav > li > a:focus {
+     color: #555;
+     text-decoration: underline;
+ }
+ .navbar-default .navbar-nav > .active > a, 
+ .navbar-default .navbar-nav > .active > a:hover, 
+ .navbar-default .navbar-nav > .active > a:focus {
+     color: #000;
+     background-color: #FFF;
+     text-decoration: underline;
+ }
+ 
+ .active_header,
+ .active_header :hover,
+ .active_header :focus {
+     color: #000;
+     background-color: #FFF;
+     text-decoration: underline;
+ }
+ 
+ .navbar-default .navbar-nav > .open > a, 
+ .navbar-default .navbar-nav > .open > a:hover, 
+ .navbar-default .navbar-nav > .open > a:focus {
+     color: #000;
+     background-color: #FFF;
+ }
+ 
+ @media (max-width: 767px) {
+     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+         color: #777;
+     }
+     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+         color: #333;
+     }
+ }
+ 
+ .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+             background-image:none !important;
+         }
+         .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+             background-color:none;
+             text-decoration: underline;
+         }
+ 
+ ul.nav a:active { 
+     color: #000 !important; 
+ }
+ 
+ ul.nav li.dropdown ul.dropdown-menu a:active{
+     color: #000 !important;    
+ }
+ 
+ 
+ .hermitage_gallery .thumbnails .span8{
+   list-style-type: none;
+   margin-left: -40px;
+ }
+ 
+ 
