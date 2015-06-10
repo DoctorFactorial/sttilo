@@ -2,12 +2,15 @@
 <html>
 <head>
 
+	<!-- google fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Raleway|Merriweather' rel='stylesheet' type='text/css'>
+
+	<!-- bootstrap -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 
-  <title>Sttilo</title>
+  <title>Sttilo | Photography</title>
   
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -15,13 +18,11 @@
 
 
 </head>
-<body>
+<body id='primary-content'>
 
-<div class ="container">
-	<%= render 'layouts/header' %>
+    <%= render 'layouts/header' %>
 	<%= yield %>
 	<%= render "layouts/footer" %>
-</div>
 
 </body>
 </html>
