@@ -1,7 +1,7 @@
 <div class='row col-md-8 col-md-offset-2'>
 	<h2 class='blog_post_title'><%= @blog.name %></h2>
 	<p class='blog_date'><%= @blog.created_at.strftime("%A, %d %b %Y") %></p>
-	<%= image_tag @blog.image.url(:content), :style => 'content' %>
+	<%= image_tag @blog.image.url(:content), class: 'img-responsive' %>
 	<br><br>
  	<div class='texts'><%= raw RedCloth.new(@blog.content).to_html %></div>	
 	<br>
