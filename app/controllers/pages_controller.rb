@@ -13,11 +13,11 @@ class PagesController < ApplicationController
   end
 
   def admin_blog
-    @items = Subpage.where(category: 'blog')
+    @items = Blog.all
   end
 
   def blog
-    @subpages = Subpage.where(category: 'blog')
+    @blogs = Blog.all
   end
 
   def about
@@ -25,7 +25,7 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @photos = Subpage.where(category: 'contract')
+    @photos = Photo.where(category: 'contact')
   end
 
   def album
