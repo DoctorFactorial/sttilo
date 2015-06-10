@@ -19,7 +19,7 @@
 						<td><%= item.id %></td>
 						<td><%= item.name %></td>
 						<td><%= link_to photo_path(item) do %>
-							<%= image_tag item.image.url(:original), class: 'thumb' %>
+							<%= image_tag item.image.url(:thumb), class: 'thumb' %>
 						<% end %></td>
 						<td><%= item.category %></td>
 						<td><%= button_to 'Show', photo_path(item), method: :get, class: 'btn btn-small' %></td>
