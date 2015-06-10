@@ -7,9 +7,21 @@
   */
 
 
-/* logo */
+/* vertical space alignment */
 .logo img{
-  width:50%;
+  width:40%;
+}
+.logo{
+  position: relative;
+  top: -20px;
+}
+.nav.navbar-nav, .nav.navbar-toggle-collapsed {
+  position: relative;
+  top: -20px;
+ }
+.gallery-up{
+  position: relative;
+  top: -20px;
 }
 
 /* headers */
@@ -119,9 +131,9 @@ footer {
 
 
 
-/* centered navigation */
+/* center navigation */
  .nav.navbar-nav {
-     float: left;
+  float: left;
  }
  .nav.navbar-nav {
      clear: left;
