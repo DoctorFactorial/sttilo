@@ -19,4 +19,7 @@
 //= require turbolinks_transitions
 //= require_tree .
 
+$(document).on("click","#yourButton",function(){
+  $(#photosTable).show();
+}); 
 

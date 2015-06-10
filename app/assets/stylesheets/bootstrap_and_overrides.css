@@ -6,6 +6,10 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+#photosTable {
+  display:none;
+}
+
 /* blog */
 .blog_title{
   margin-top: 10px;
@@ -16,6 +20,12 @@
   color: #e55f7f;
   text-align: left;
   font-family: 'Merriweather', serif;
+}
+
+.links {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 85%;
 }
 
 /* masonry boxes */

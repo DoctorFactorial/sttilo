@@ -7,10 +7,16 @@ class PagesController < ApplicationController
     @subpages = Subpage.where(category: 'home page')
   end
 
-  def dashboard
-    authorize! :manage, @photo
-    @photos = Photo.all
-    @subpages = Subpage.all
+  def admin_photos
+    @items = Photo.all
+  end
+
+  def admin_pages
+    @items = Subpage.all
+  end
+
+  def admin_blog
+    @items = Subpage.where(category: 'blog')
   end
 
   def blog

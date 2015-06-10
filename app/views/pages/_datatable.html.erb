@@ -1,0 +1,36 @@
+<div class='row'>
+	<div class='col-md-10 col-md-offset-1'>
+		<h3 class='text-center'><%= link_to 'Add Photo', new_photo_path, class: 'btn btn-primary btn-sm' %></h3>
+		<h3 class ='text-center'><%= link_to 'Add Page / Post', new_subpage_path, class: 'btn btn-primary btn-sm' %></h3>
+		<table class='table'>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>NAME</th>
+					<th>PHOTO</th>
+					<th>CATEGORY</th>
+					<th>SHOW</th>
+					<th>EDIT</th>
+					<th>DELETE</th>
+
+				</tr>
+			</thead>	
+			<tbody>
+				<% @items.each do |item| %>
+					<tr>
+						<td><%= item.id %></td>
+						<td><%= item.name %></td>
+						<td><%= link_to photo_path(item) do %>
+							<%= image_tag item.image.url(:original), class: 'thumb' %>
+						<% end %></td>
+						<td><%= item.category %></td>
+						<td><%= button_to 'Show', photo_path(item), method: :get, class: 'btn btn-small' %></td>
+        				<td><%= button_to 'Edit', edit_photo_path(item), method: :get, class: 'btn btn-small' %></td>
+        				<td><%= button_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-small' %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+
+	</div>
+</div>
