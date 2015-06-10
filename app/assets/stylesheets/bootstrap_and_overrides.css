@@ -16,15 +16,8 @@
   color: #722f3f;
 }
 
-/* blog */
-.shift_forms_up{
-  margin-top: -50px;
-}
 
-/* weddings images shift up*/
-.shift_gallery_up{
-  margin-top: -30px;
-}
+
 
 .blog_title{
   margin-top: 10px;
@@ -73,6 +66,25 @@
   position: relative;
   top: -20px;
 }
+
+/* forms */
+.shift_forms_up{
+  margin-top: 42px;
+}
+
+/* tables + navbar height decrease */
+.shift_tables_up{
+  margin-top: 0px;
+}
+nav.navbar.navbar-default{
+  height: 50px;
+}
+
+/* weddings images shift up*/
+.shift_gallery_up{
+  margin-top: 52px;
+}
+
 
 /* headers */
 .headers {
