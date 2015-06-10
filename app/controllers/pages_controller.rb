@@ -36,11 +36,7 @@ class PagesController < ApplicationController
     @subpages = Subpage.where(category: 'weddings')
   end
 
-  def travel
-    @subpages = Subpage.where(category: 'travel')
-  end
-
-  def communion
-    @subpages = Subpage.where(category: 'communion')
+  def lifestyle
+    @subpages = Subpage.where(category: 'lifestyle')
   end
 end

@@ -51,13 +51,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       	<li class=<%= 'active' if current_page?(weddings_path) %>><%= link_to 'Weddings'.html_safe.upcase, weddings_path, :class => 'headers'%></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle headers" data-toggle="dropdown" role="button" aria-expanded="false">LIFESTYLE </a>
-          <ul class="dropdown-menu" role="menu">
-            <li class=<%= 'active' if current_page?(travel_path) %>><%= link_to 'Travel'.upcase, travel_path, :class => 'headers' %></li>
-            <li><%= link_to 'Communion'.upcase, communion_path %></li>
-          </ul>
-        </li>
+        <li class=<%= 'active' if current_page?(lifestyle_path) %>><%= link_to 'Lifestyle'.upcase, lifestyle_path, :class => 'headers' %></li>
       	<li class=<%= 'active' if current_page?(album_path) %>><%= link_to 'Album'.upcase, album_path, :class => 'headers' %></li>
       	<li class=<%= 'active' if current_page?(about_path) %>><%= link_to 'About'.upcase, about_path, :class => 'headers' %></li>
       	<li class=<%= 'active' if current_page?(blog_path) %>><%= link_to 'Blog'.upcase, blog_path, :class => 'headers' %></li>
