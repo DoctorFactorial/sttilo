@@ -102,13 +102,17 @@
 .shift_tables_up{
   margin-top: 0px;
 }
-nav.navbar.navbar-default{
-  height: 50px;
-}
 
 /* weddings images shift up*/
 .shift_gallery_up{
   margin-top: 52px;
+}
+
+@media (min-width: 768px) {
+/* toggled navigation */
+nav.navbar.navbar-default{
+  height: 50px;
+}
 }
 
 .shift_about_up{
@@ -223,8 +227,22 @@ footer {
 /* vertically align navigation for responsive */
 @media (max-width: 767px) {
 .navbar-toggle {
-  margin-top: -10px !important;  
-  margin-bottom: 25px !important;  
+  margin-top: -90px !important;  
+  margin-bottom: 25px !important; 
+  }
+/* tables + navbar height decrease */
+.shift_tables_up{
+  margin-top: 0px;
+}
+/* weddings images shift up*/
+.shift_gallery_up{
+  margin-top: -35px; 
+}
+.shift_forms_up{
+  margin-top: -52px;
+}
+.shift_about_up{
+  margin-top: -32px;
 }
 }
 
