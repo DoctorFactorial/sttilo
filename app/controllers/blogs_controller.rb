@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @blog= Blog.friendly.find(params[:id])
-    @photos = Photo.where(:category => request.original_url.split('/')[4])
+    @photos = Photo.where(:category => request.original_url.split('/')[5])
   end
 
   # GET /blogs/new
@@ -31,7 +31,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
+        format.html { redirect_to admin_blog_path, notice: 'Blog was successfully created.' }
         format.json { render :show, status: :created, location: @blog }
       else
         format.html { render :new }

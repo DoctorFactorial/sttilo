@@ -4,10 +4,12 @@
 	<div class='col-md-8'>
 		<div>
 			<h2 class='blog_post_title text-center'><%= @subpage.name %></h2>
-			<p class='blog_date'><%= I18n.l @subpage.created_at %></p>
+			<p class='blog_date_subpages'><%= I18n.l @subpage.created_at %></p>
+			<% if @subpage.content_html %>
+			<%= raw RedCloth.new(@subpage.content_html).to_html %>
+			<% end %>
 			<%= render 'pages/photos' %>
 		</div>
-		<%= @subpage.content %>
  	</div>
  	<br>
  	<div class='col-md-2'></div>

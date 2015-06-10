@@ -12,7 +12,7 @@ class SubpagesController < ApplicationController
   # GET /subpages/1.json
   def show
     @subpage = Subpage.friendly.find(params[:id])
-    @photos = Photo.where(:category => request.original_url.split('/')[4])
+    @photos = Photo.where(:category => request.original_url.split('/')[5])
   end
 
   # GET /subpages/new
@@ -45,7 +45,7 @@ class SubpagesController < ApplicationController
   def update
     respond_to do |format|
       if @subpage.update(subpage_params)
-        format.html { redirect_to @subpage, notice: 'Subpage was successfully updated.' }
+        format.html { redirect_to admin_pages_path, notice: 'Subpage was successfully created.' }
         format.json { render :show, status: :ok, location: @subpage }
       else
         format.html { render :edit }
