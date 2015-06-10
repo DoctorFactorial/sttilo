@@ -2,7 +2,6 @@ class PagesController < ApplicationController
 
   def home
     redirect_to weddings_path
-    @subpages = Subpage.where(category: 'home page')
   end
 
   def admin_photos

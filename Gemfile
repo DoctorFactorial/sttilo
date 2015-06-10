@@ -79,4 +79,6 @@ gem 'friendly_id'
 # Redcloth - Markup for dynamic subpages
 gem 'RedCloth', '~> 4.2.9'
 
+# Install Mail_form
+gem 'mail_form'
 

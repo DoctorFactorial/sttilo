@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   DynamicRouter.load
   resources :subpages
 
+  resources 'contacts', only: [:new, :create]
+  get 'contact' => 'contacts#new'
+
   devise_for :admins
   resources :photos
 
@@ -11,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'blog' => 'pages#blog'
   get 'about' => 'pages#about'
-  get 'contact' => 'pages#contact'
+  
   get 'album' => 'pages#album'
   get 'weddings' => 'pages#weddings'
   get 'travel' => 'pages#travel'
