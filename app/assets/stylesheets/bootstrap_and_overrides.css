@@ -7,6 +7,10 @@
   */
 
 
+/* 'Coming soon!' text */
+#coming_soon {
+  color: #722f3f;
+}
 
 /* blog */
 .blog_title{
@@ -15,7 +19,7 @@
   font-family: 'Merriweather', serif;
 }
 .blog_date{
-  color: #e55f7f;
+  color: #722f3f;
   text-align: left;
   font-family: 'Merriweather', serif;
 }
@@ -82,16 +86,16 @@
 }
  
 .btn-primary {
-    background: #3D6652;
+    background: #722f3f;
     color: #ffffff !important;
 }
  
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #779486;
+    background: #9c6d78;
 }
  
 .btn-primary:active, .btn-primary.active {
-    background: #3D6652;
+    background: #722f3f;
     box-shadow: none;
 }
 
@@ -108,26 +112,26 @@
 }
  
 .btn-small {
-    background: #3D6652;
+    background: #722f3f;
     color: #ffffff !important;
 }
  
 .btn-small:hover, .btn-small:focus, .btn-small:active, .btn-small.active, .open > .dropdown-toggle.btn-primary {
-    background: #779486;
+    background: #9c6d78;
 }
  
 .btn-small:active, .btn-small.active {
-    background: #3D6652;
+    background: #722f3f;
     box-shadow: none;
 }
 
 /* simple-form */
 h4.sub-header{
-  color: #3D6652;
+  color: #722f3f;
 }
 
 h1.sub-header{
-  color: #3D6652;
+  color: #722f3f;
 }
 
 /* footer */
