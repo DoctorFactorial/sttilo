@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  DynamicRouter.load
   resources :subpages
 
   devise_for :admins
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
   get 'communion' => 'pages#communion'
   get 'dashboard' => 'pages#dashboard'
 
-  DynamicRouter.load
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   end
 
   def blog
-    @photos = Photo.where(category: 'blog')
+    @subpages = Subpage.where(category: 'blog')
   end
 
   def about

@@ -11,7 +11,7 @@ class SubpagesController < ApplicationController
   # GET /subpages/1.json
   def show
     @subpage = Subpage.friendly.find(params[:id])
-    @photos = Photo.all
+    #@photos = Photo.all
     #redirect_to send("#{@subpage.category.downcase}_path")
   end
 

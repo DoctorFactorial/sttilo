@@ -1,7 +1,13 @@
 <div class="transitions-enabled" id="posts">
-  <% @photos.each do |p| %>
+  <% @subpages.each do |sp| %>
     <div class="box panel panel-default">
-      <%= link_to (image_tag p.image.url), p %>
+	  <%= link_to (image_tag sp.image.url), send("#{sp.category}_#{sp.id}_path") %>
+      <div class='container'>
+      	<h3 class='blog_title'> <%= sp.name %> </h3>
+	      <p class='blog_date'>
+	      <%= sp.created_at.strftime("%A, %d %b %Y") %> 
+	      </p>
+	  </div>
     </div>
   <% end %>
 </div>
