@@ -1,9 +1,12 @@
 <div class='shift_tables_up'>
 <h3 class='text-center'><%= link_to 'Add Blog Post', new_blog_path, class: 'btn btn-primary btn-sm' %></h3>
+
+<div class='col-md-10 col-md-offset-1 text-right'>
 <%= form_tag(admin_blog_path, :method => "get", id: "search-form") do %>
 	<%= text_field_tag :search, params[:search], placeholder: "Search" %>
 	<%= submit_tag "Search", :name => nil %>
 <% end %>
+</div>
 
 <%= render 'datatable' %>
 

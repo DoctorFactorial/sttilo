@@ -6,25 +6,25 @@ class PagesController < ApplicationController
 
   def admin_photos
     if params[:search]
-      @items = Photo.all.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+      @items = Photo.all.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
     else
-      @items = Photo.all.paginate(:page => params[:page], :per_page => 5)
+      @items = Photo.all.paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def admin_pages
     if params[:search]
-      @items = Subpage.all.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+      @items = Subpage.all.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
     else
-      @items = Subpage.all.paginate(:page => params[:page], :per_page => 5)
+      @items = Subpage.all.paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def admin_blog
     if params[:search]
-      @items = Photo.all.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+      @items = Blog.all.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
     else
-      @items = Blog.all.paginate(:page => params[:page], :per_page => 5)
+      @items = Blog.all.paginate(:page => params[:page], :per_page => 10)
     end
   end
 
