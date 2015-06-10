@@ -12,6 +12,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @blog= Blog.friendly.find(params[:id])
+    @photos = Photo.where(:category => request.original_url.split('/')[4])
   end
 
   # GET /blogs/new
