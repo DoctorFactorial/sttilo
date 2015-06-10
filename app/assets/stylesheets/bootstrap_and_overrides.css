@@ -7,6 +7,20 @@
   */
 
 
+/* Pagination */
+.pagination>li>a,.pagination>li>a:hover,.pagination>li>a:focus, .pagination>li>span {
+  color: #722F3F;
+}
+
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+  background-color: #8E5865;
+  border-color: #8E5865;
+}
+
+.pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
+  cursor: not-allowed;
+}
+
 /* contacts form in-line */
 .form-inline div { display: inline-block }
 
@@ -18,7 +32,6 @@
 
 
 /* blog */
-
 .blog_title{
   margin-top: 10px;
   text-align: left;
