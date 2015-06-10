@@ -22,8 +22,6 @@
       <%= link_to "Photos".upcase, admin_photos_path, {:style => 'font-size:90%;', :class => 'headers'} %>
       &nbsp; // &nbsp; 
       <%= link_to "Blog".upcase, admin_blog_path, {:style => 'font-size:90%;', :class => 'headers'} %>
-      &nbsp; // &nbsp; 
-      <%= link_to "Metrics".upcase, dashboard_path, {:style => 'font-size:90%;', :class => 'headers'} %>
     <% else %>
       <%= link_to 'Login'.upcase, new_user_session_path, {:style => 'font-size:90%;color:white;', :class => 'headers'} %>
     <% end %>
