@@ -6,6 +6,12 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+
+/* logo */
+.logo img{
+  width:50%;
+}
+
 /* headers */
 .headers {
   font-family: 'Raleway', sans-serif;
