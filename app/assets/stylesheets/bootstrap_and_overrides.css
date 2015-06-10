@@ -7,12 +7,25 @@
   */
 
 
+/* contacts form in-line */
+.form-inline div { display: inline-block }
+
+
 /* 'Coming soon!' text */
 #coming_soon {
   color: #722f3f;
 }
 
 /* blog */
+.shift_forms_up{
+  margin-top: -50px;
+}
+
+/* weddings images shift up*/
+.shift_gallery_up{
+  margin-top: -30px;
+}
+
 .blog_title{
   margin-top: 10px;
   text-align: left;
