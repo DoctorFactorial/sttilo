@@ -1,5 +1,5 @@
 <div class="transitions-enabled col1" id="blogs">
-  <% @blogs.each do |b| %>
+  <% @blogs.reverse.each do |b| %>
     <div class="box panel panel-default" id="masonry-container">
       <%= link_to (image_tag b.image.url), send("#{b.category}_#{b.id}_path") %>
       <div class='container' id='blogs'>
