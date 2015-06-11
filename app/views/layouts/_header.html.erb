@@ -5,11 +5,11 @@
   <div id="language_menu">
 <ul style='display:in-line;list-style-type:none;'>
 <li class=<%= 'active' if I18n.locale == I18n.default_locale %>>
-  <%= link_to "EspaÑol".upcase, :locale=>'es' %>
+  <%= link_to "EspaÑol".upcase, 'http://localhost:3000' + locale_url_es('es'), :locale=>'es' %>
 </li> 
 &nbsp;|&nbsp;
 <li class=<%= 'active' if I18n.locale != I18n.default_locale %>>
-  <%= link_to "English".upcase, :locale=>'en' %>
+  <%= link_to "English".upcase, 'http://localhost:3000' + locale_url_en('en'), :locale=>'en' %>
 </li>
 </ul>
   </div>
