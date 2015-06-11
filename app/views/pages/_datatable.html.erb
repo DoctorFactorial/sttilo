@@ -14,11 +14,11 @@
 				</tr>
 			</thead>	
 			<tbody>
-				<% @items.reverse.each do |item| %>
+				<% @items.each do |item| %>
 					
 					<!-- Set show + edit paths --> 
 					<% case request.original_url.split('admin/')[1][0,4] %>
-+					<% when 'page' %>
+					<% when 'page' %>
 						<% show_path = subpage_path(item) %>
 						<% edit_path = edit_subpage_path(item) %>
 					<% when 'phot' %>

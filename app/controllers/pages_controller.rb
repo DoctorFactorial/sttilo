@@ -6,25 +6,25 @@ class PagesController < ApplicationController
 
   def admin_photos
     if params[:search]
-      @items = Photo.all.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+      @items = Photo.all.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
     else
-      @items = Photo.all.paginate(:page => params[:page], :per_page => 10)
+      @items = Photo.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def admin_pages
     if params[:search]
-      @items = Subpage.all.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+      @items = Subpage.all.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
     else
-      @items = Subpage.all.paginate(:page => params[:page], :per_page => 10)
+      @items = Subpage.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def admin_blog
     if params[:search]
-      @items = Blog.all.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+      @items = Blog.all.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
     else
-      @items = Blog.all.paginate(:page => params[:page], :per_page => 10)
+      @items = Blog.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
     end
   end
 
