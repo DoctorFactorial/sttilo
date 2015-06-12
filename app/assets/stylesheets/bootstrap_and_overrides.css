@@ -6,6 +6,8 @@
    =require twitter-bootstrap-static/fontawesome
    */
  
+
+
  /* Search */
  #search-form {
    color:#722f3f;
@@ -120,6 +122,7 @@
    margin-top: 22px;
  }
  
+
  
  /* headers */
  .headers {
@@ -238,6 +241,11 @@
  }
  /* vertically align navigation for responsive */
  @media (max-width: 767px) {
+
+   #show_shift_up{
+  margin-top: -90px;
+ }
+
  .navbar-toggle {
    margin-top: -90px !important;  
    margin-bottom: 25px !important;  
