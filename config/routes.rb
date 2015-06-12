@@ -1,18 +1,13 @@
 Rails.application.routes.draw do
 
   DynamicRouter.load
-
+  DynamicBlogRouter.load
   scope "(:locale)", :locale => /en|es/ do  
     
-    DynamicBlogRouter.load
     resources :blogs, :except => ['show', 'update', 'destroy']
     get    'blogs/:id' => 'blogs#show', :as => 'show_blog'
     put    'blogs/:id' => 'blogss#update'
     delete 'blogs/:id' => 'blogs#destroy'
-
-    end
-  
-  scope "(:locale)", :locale => /en|es/ do  
 
     resources :subpages
 

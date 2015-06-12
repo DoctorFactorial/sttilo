@@ -31,7 +31,7 @@ class SubpagesController < ApplicationController
 
     respond_to do |format|
       if @subpage.save
-        format.html { redirect_to @subpage, notice: 'Subpage was successfully created.' }
+        format.html { redirect_to admin_pages_path, notice: 'Subpage was successfully created.' }
         format.json { render :show, status: :created, location: @subpage }
       else
         format.html { render :new }
