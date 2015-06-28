@@ -1,7 +1,7 @@
 <div class="transitions-enabled col1" id="blogs">
   <% @blogs.reverse.each do |b| %>
     <div class="box panel panel-default" id="masonry-container">
-      <%= link_to (image_tag b.image.url), send("#{b.category}_#{b.id}_path") %>
+      <%= link_to (image_tag b.image.url(:display)), send("#{b.category}_#{b.id}_path") %>
       <div class='container' id='blogs'>
       	<h3 class='blog_title'> <%= b.name %> </h3>
 	      <p class='blog_date'>
